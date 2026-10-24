@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+  src/parts/button-submit.html — 제출 버튼 (Figma 195:634 · Button · 허들링 B안 공통 컴포넌트)
+  크기: 350×44 (피그마 레이어 값 그대로, docs/design.md 4장)
+  상태: #button-submit의 data-state로 문구만 바뀐다. 피그마는 인스턴스마다 글자를 바꿔 씀
+    submit       "제출하기"              (부품 원본 195:634)
+    view-assets  "내 자산에서 보기"       (04-approved 191:1275)
+    add-asset    "＋ 새 자산 등록"        (05-assets 191:1288, 전각 ＋ 그대로)
+    apply-case   "적용 사례 정리하기 →"   (mission-card 안 195:638, 폭 318)
+  확인용: ?state=<값> 으로 열면 그 상태로 보인다
+  눌림 모션은 src/patterns/button-press.html 주석대로 장면에서 만든다
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>button-submit</title>
+<style>
+  @font-face { font-family: "Pretendard"; font-weight: 600; src: url("../assets/fonts/Pretendard-SemiBold.otf") format("opentype"); }
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-primary: #3759de;
+    --color-on-primary: #ffffff;
+  }
+  html, body { margin: 0; background: transparent; }
+  #button-submit {
+    box-sizing: border-box;
+    width: 350px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary);
+  }
+  #button-submit[data-state="apply-case"] { width: 318px; }
+  /* Text/label */
+  #button-submit .label {
+    flex: 1 0 0;
+    min-width: 1px;
+    margin: 0;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-on-primary);
+    text-align: center;
+  }
+  #button-submit .label > span { display: none; }
+  #button-submit[data-state="submit"] [data-for="submit"],
+  #button-submit[data-state="view-assets"] [data-for="view-assets"],
+  #button-submit[data-state="add-asset"] [data-for="add-asset"],
+  #button-submit[data-state="apply-case"] [data-for="apply-case"] { display: inline; }
+</style>
+</head>
+<body>
+  <div id="button-submit" data-state="submit">
+    <p class="label"><span data-for="submit">제출하기</span><span data-for="view-assets">내 자산에서 보기</span><span data-for="add-asset">＋ 새 자산 등록</span><span data-for="apply-case">적용 사례 정리하기 →</span></p>
+  </div>
+  <script>
+    const state = new URLSearchParams(location.search).get("state");
+    if (state) document.getElementById("button-submit").dataset.state = state;
+  </script>
+</body>
+</html>

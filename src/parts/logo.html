@@ -1,0 +1,40 @@
+<!doctype html>
+<!--
+  src/parts/logo.html — 허들링 클럽 로고 (Figma Logo 255:2692, variant 4개)
+  원본: src/assets/logo-*.svg. 감싸기만 하고 고치지 않는다
+  상태: #logo의 data-state (피그마 variant = type × color)
+    logotype-black  149×19   (195:630, 기본 — 예전 logo 부품)
+    logotype-white  149×19   (255:2693)
+    symbol-black    100×100  (255:2691)
+    symbol-white    100×100  (255:2690)
+  확인용: ?state=<값> 으로 열면 그 상태로 보인다
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>logo</title>
+<style>
+  html, body { margin: 0; background: transparent; }
+  #logo { position: relative; }
+  #logo[data-state^="logotype"] { width: 149px; height: 19px; }
+  #logo[data-state^="symbol"] { width: 100px; height: 100px; }
+  #logo img { display: none; position: absolute; left: 0; top: 0; }
+  #logo[data-state="logotype-black"] [data-for="logotype-black"],
+  #logo[data-state="logotype-white"] [data-for="logotype-white"],
+  #logo[data-state="symbol-black"] [data-for="symbol-black"],
+  #logo[data-state="symbol-white"] [data-for="symbol-white"] { display: block; }
+</style>
+</head>
+<body>
+  <div id="logo" data-state="logotype-black">
+    <img data-for="logotype-black" src="../assets/logo-logotype-black.svg" width="149" height="19" alt="Huddling Club">
+    <img data-for="logotype-white" src="../assets/logo-logotype-white.svg" width="149" height="19" alt="Huddling Club">
+    <img data-for="symbol-black" src="../assets/logo-symbol-black.svg" width="100" height="100" alt="Huddling Club">
+    <img data-for="symbol-white" src="../assets/logo-symbol-white.svg" width="100" height="100" alt="Huddling Club">
+  </div>
+  <script>
+    const state = new URLSearchParams(location.search).get("state");
+    if (state) document.getElementById("logo").dataset.state = state;
+  </script>
+</body>
+</html>

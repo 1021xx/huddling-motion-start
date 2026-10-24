@@ -1,0 +1,105 @@
+<!doctype html>
+<!--
+  src/parts/asset-card.html — 자산 카드 (Figma 197:640 · 197:656 · 197:671 · 197:686 · AssetCard · "실습 소재" 섹션)
+  크기: 350×74 (피그마 레이어 값 그대로, docs/design.md 4장). 안쪽 여백 16 · 간격 12 · 모서리 8 · 아이콘 칸 40×32 모서리 6
+  일러스트: src/assets/buddy-front-1.png (private-image) · buddy-front-2.png (review). 피그마 에셋과 같은 파일. 감싸기만 하고 고치지 않는다
+  상태: #asset-card의 data-state (피그마 variant 4개)
+    private-image  "회의록 자동 정리 템플릿" · "비공개 · 나만 볼 수 있어요"      (197:640, 펭귄 아이콘)
+    review         "리서치 비교표 템플릿" · "멤버 공개 · 판매 검수 중"          (197:656, 펭귄 아이콘)
+    selling        "업무 자동화 체크리스트" · "멤버 공개 · 판매 중 · ₩9,900"     (197:671, "파일" 아이콘)
+    private-file   "주간 보고서 작성 도우미" · "비공개 · 판매 신청 전"          (197:686, "파일" 아이콘)
+  펭귄 아이콘 상태는 위쪽 정렬, "파일" 아이콘 상태는 가운데 정렬 (피그마 그대로)
+  확인용: ?state=<값> 으로 열면 그 상태로 보인다
+  비교 캡처: src/parts/_check/asset-card.png
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>asset-card</title>
+<style>
+  @font-face { font-family: "Pretendard"; font-weight: 400; src: url("../assets/fonts/Pretendard-Regular.otf") format("opentype"); }
+  @font-face { font-family: "Pretendard"; font-weight: 600; src: url("../assets/fonts/Pretendard-SemiBold.otf") format("opentype"); }
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-bg: #ffffff;
+    --color-surface: #f7f7f8;
+    --color-text: #18191b;
+    --color-text-muted: #75777c;
+    --color-primary: #3759de;
+    --color-character-bg: #e3f2fd;
+  }
+  html, body { margin: 0; background: transparent; }
+  #asset-card {
+    box-sizing: border-box;
+    width: 350px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-surface);
+    font-family: "Pretendard", sans-serif;
+  }
+  #asset-card[data-state="selling"],
+  #asset-card[data-state="private-file"] { align-items: center; }
+  #asset-card p { margin: 0; }
+  /* 아이콘 칸 */
+  #asset-card .icon {
+    box-sizing: border-box;
+    flex: none;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  #asset-card .icon-image { height: 32px; background: var(--color-character-bg); }
+  #asset-card .icon-image img { display: block; width: 40px; height: 32px; object-fit: contain; }
+  #asset-card .icon-file { padding: 8px; background: var(--color-bg); }
+  /* Text/eyebrow */
+  #asset-card .icon-file p { width: 24px; font-weight: 600; font-size: 11px; line-height: 16px; color: var(--color-primary); }
+  #asset-card .copy { width: 266px; display: flex; flex-direction: column; gap: 4px; overflow: hidden; }
+  /* Text/list-title */
+  #asset-card .title { font-weight: 600; font-size: 15px; line-height: 22px; color: var(--color-text); }
+  /* Text/caption */
+  #asset-card .meta { font-weight: 400; font-size: 12px; line-height: 16px; color: var(--color-text-muted); }
+  /* 상태별로 하나만 보인다 */
+  #asset-card [data-for] { display: none; }
+  #asset-card[data-state="private-image"] [data-for~="private-image"],
+  #asset-card[data-state="review"] [data-for~="review"],
+  #asset-card[data-state="selling"] [data-for~="selling"],
+  #asset-card[data-state="private-file"] [data-for~="private-file"] { display: block; }
+  #asset-card .copy[data-for] { display: none; }
+  #asset-card[data-state="private-image"] .copy[data-for~="private-image"],
+  #asset-card[data-state="review"] .copy[data-for~="review"],
+  #asset-card[data-state="selling"] .copy[data-for~="selling"],
+  #asset-card[data-state="private-file"] .copy[data-for~="private-file"] { display: flex; }
+</style>
+</head>
+<body>
+  <div id="asset-card" data-state="private-image">
+    <div class="icon icon-image" data-for="private-image"><img src="../assets/buddy-front-1.png" alt=""></div>
+    <div class="icon icon-image" data-for="review"><img src="../assets/buddy-front-2.png" alt=""></div>
+    <div class="icon icon-file" data-for="selling private-file"><p>파일</p></div>
+    <div class="copy" data-for="private-image">
+      <p class="title">회의록 자동 정리 템플릿</p>
+      <p class="meta">비공개 · 나만 볼 수 있어요</p>
+    </div>
+    <div class="copy" data-for="review">
+      <p class="title">리서치 비교표 템플릿</p>
+      <p class="meta">멤버 공개 · 판매 검수 중</p>
+    </div>
+    <div class="copy" data-for="selling">
+      <p class="title">업무 자동화 체크리스트</p>
+      <p class="meta">멤버 공개 · 판매 중 · ₩9,900</p>
+    </div>
+    <div class="copy" data-for="private-file">
+      <p class="title">주간 보고서 작성 도우미</p>
+      <p class="meta">비공개 · 판매 신청 전</p>
+    </div>
+  </div>
+  <script>
+    const s = new URLSearchParams(location.search).get("state");
+    if (s) document.getElementById("asset-card").dataset.state = s;
+  </script>
+</body>
+</html>

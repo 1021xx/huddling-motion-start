@@ -1,0 +1,45 @@
+<!doctype html>
+<!--
+  src/parts/badge-approved.html — 승인 완료 배지 (Figma 195:635)
+  크기: 108×32 (피그마 레이어 값 그대로, docs/design.md 4장). 모서리 radius-button 8 (design.md 4장)
+  상태: 없음 (피그마에 variant 없음)
+  강조 모션은 src/patterns/badge-pulse.html 주석대로 장면에서 만든다
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>badge-approved</title>
+<style>
+  @font-face { font-family: "Pretendard"; font-weight: 400; src: url("../assets/fonts/Pretendard-Regular.otf") format("opentype"); }
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-primary-subtle: #edf1ff;
+    --color-success: #247a51;
+  }
+  html, body { margin: 0; background: transparent; }
+  #badge-approved {
+    box-sizing: border-box;
+    width: 108px;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary-subtle);
+  }
+  /* Text/caption */
+  #badge-approved .label {
+    width: 92px;
+    margin: 0;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-success);
+  }
+</style>
+</head>
+<body>
+  <div id="badge-approved">
+    <p class="label">승인 완료</p>
+  </div>
+</body>
+</html>
