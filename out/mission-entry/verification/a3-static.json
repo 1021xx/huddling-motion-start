@@ -1,0 +1,167 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 0.7,
+    "samples": [
+      0
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      0
+    ],
+    "checked": 4,
+    "passed": 4
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"검토 후,내 자산으로\" (4 words) is on screen 0.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "검토 후,내 자산으로",
+        "selector": "h1.headline",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 960,
+          "y": 244.2,
+          "width": 306.29999999999995,
+          "height": 169.59999999999997
+        },
+        "time": 0,
+        "words": 4,
+        "seconds": 0.7,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"승인된 결과물이내 자산에 등록돼요.\" (4 words) is on screen 0.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "승인된 결과물이내 자산에 등록돼요.",
+        "selector": "p.subline",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 960,
+          "y": 451.39,
+          "width": 322.1399999999999,
+          "height": 117.20000000000005
+        },
+        "time": 0,
+        "words": 4,
+        "seconds": 0.7,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"내 자산에서 보기\" (3 words) is on screen 0.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "내 자산에서 보기",
+        "selector": "#button-submit > p:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1218.66,
+          "y": 717.8,
+          "width": 182.68000000000006,
+          "height": 32
+        },
+        "time": 0,
+        "words": 3,
+        "seconds": 0.7,
+        "floorSeconds": 2
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"승인 완료\" renders at 24 px for 0.70 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "승인 완료",
+        "selector": "#badge-approved > p:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 976,
+          "y": 619.8,
+          "width": 89,
+          "height": 28
+        },
+        "time": 0,
+        "times": [
+          0
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 0.7,
+        "elements": [
+          {
+            "selector": "#badge-approved > p:nth-of-type(1)",
+            "text": "승인 완료",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 0.7
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.11699999999999997,
+    "samples": 6
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

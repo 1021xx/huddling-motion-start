@@ -1,0 +1,78 @@
+{
+  "duration": 15,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#a1-phone-motion",
+      "bySec": 0.24
+    },
+    {
+      "kind": "before",
+      "a": "#a1-phone-motion",
+      "b": "#a1-card-motion"
+    },
+    {
+      "kind": "before",
+      "a": "#a2-card-motion",
+      "b": "#a2-button-motion"
+    },
+    {
+      "kind": "before",
+      "a": "#a3-badge-motion",
+      "b": "#a3-button-motion"
+    },
+    {
+      "kind": "before",
+      "a": "#a3-button-motion",
+      "b": "#a3-logo-motion"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a1-phone-motion"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a2-phone-motion"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a3-phone-motion"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a1-headline"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a2-headline"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a3-headline"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a1-card-shell"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a2-card-shell"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a2-button-shell"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a3-badge-shell"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a3-button-shell"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#a3-logo-shell"
+    }
+  ]
+}

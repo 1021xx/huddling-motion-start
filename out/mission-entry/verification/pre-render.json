@@ -1,0 +1,344 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 4
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 15,
+    "samples": [
+      0,
+      0.12,
+      0.48,
+      2.5,
+      5,
+      5.35,
+      7.5,
+      10,
+      10.61,
+      12.5,
+      14.967
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "specPath": "out/mission-entry/video/index.motion.json",
+    "samples": 300
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+        "text": "자동화 자산 1개 + 실제 적용 사례 1개",
+        "fg": "rgb(117,119,124)",
+        "bg": "rgb(255,255,255)",
+        "ratio": 4.48,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,118,123)",
+        "large": false,
+        "selector": "div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div > div > div > div > div > p",
+        "dataAttributes": {
+          "data-hf-id": "hf-41uz"
+        },
+        "sourceFile": "compositions/a1.html",
+        "bbox": {
+          "x": 994,
+          "y": 717.6174926757812,
+          "width": 636,
+          "height": 31.99993896484375
+        },
+        "time": 0.48,
+        "times": [
+          0.48
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+        "text": "9월 30일 마감",
+        "fg": "rgb(117,119,124)",
+        "bg": "rgb(255,255,255)",
+        "ratio": 4.48,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,118,123)",
+        "large": false,
+        "selector": "div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+        "dataAttributes": {
+          "data-hf-id": "hf-smkz"
+        },
+        "sourceFile": "compositions/a1.html",
+        "bbox": {
+          "x": 1374,
+          "y": 773.617431640625,
+          "width": 256,
+          "height": 32
+        },
+        "time": 0.48,
+        "times": [
+          0.48
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+        "text": "자동화 자산 1개 + 실제 적용 사례 1개",
+        "fg": "rgb(117,119,124)",
+        "bg": "rgb(255,255,255)",
+        "ratio": 4.48,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,118,123)",
+        "large": false,
+        "selector": "div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > p",
+        "dataAttributes": {
+          "data-hf-id": "hf-41uz"
+        },
+        "sourceFile": "compositions/a2.html",
+        "bbox": {
+          "x": 994,
+          "y": 628.1875,
+          "width": 636,
+          "height": 32
+        },
+        "time": 5.35,
+        "times": [
+          5.35
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+        "text": "9월 30일 마감",
+        "fg": "rgb(117,119,124)",
+        "bg": "rgb(255,255,255)",
+        "ratio": 4.48,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,118,123)",
+        "large": false,
+        "selector": "div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+        "dataAttributes": {
+          "data-hf-id": "hf-smkz"
+        },
+        "sourceFile": "compositions/a2.html",
+        "bbox": {
+          "x": 1374,
+          "y": 684.1875,
+          "width": 256,
+          "height": 32
+        },
+        "time": 5.35,
+        "times": [
+          5.35
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      0,
+      0.48,
+      5.35,
+      10,
+      14.967
+    ],
+    "checked": 25,
+    "passed": 21
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 4 text elements stay under it for 0.5 s or more, the smallest \"이번 달 미션 · D–12\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "이번 달 미션 · D–12",
+        "selector": "#a1-mission-card > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/a1.html",
+        "bbox": {
+          "x": 994,
+          "y": 499.88,
+          "width": 198.31,
+          "height": 28
+        },
+        "time": 0.375,
+        "times": [
+          0.375,
+          0.375,
+          0.375,
+          0.375
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.625,
+        "elements": [
+          {
+            "selector": "#a1-mission-card > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "이번 달 미션 · D–12",
+            "fontPx": 24,
+            "time": 0.375,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#a1-mission-card > p:nth-of-type(1)",
+            "text": "자동화 자산 1개 + 실제 적용 사례 1개",
+            "fontPx": 24,
+            "time": 0.375,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#a1-mission-card-progress-text",
+            "text": "50% · 2/4 단계 완료",
+            "fontPx": 24,
+            "time": 0.375,
+            "seconds": 4.625
+          },
+          {
+            "selector": "#a1-mission-card > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+            "text": "9월 30일 마감",
+            "fontPx": 24,
+            "time": 0.375,
+            "seconds": 4.625
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 4 text elements stay under it for 0.5 s or more, the smallest \"이번 달 미션 · D–12\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "이번 달 미션 · D–12",
+        "selector": "#a2-mission-card > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/a2.html",
+        "bbox": {
+          "x": 994,
+          "y": 408.52,
+          "width": 198.31,
+          "height": 28
+        },
+        "time": 5.125,
+        "times": [
+          5.125,
+          5.125,
+          5.125,
+          5.125
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.875,
+        "elements": [
+          {
+            "selector": "#a2-mission-card > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "이번 달 미션 · D–12",
+            "fontPx": 24,
+            "time": 5.125,
+            "seconds": 4.875
+          },
+          {
+            "selector": "#a2-mission-card > p:nth-of-type(1)",
+            "text": "자동화 자산 1개 + 실제 적용 사례 1개",
+            "fontPx": 24,
+            "time": 5.125,
+            "seconds": 4.875
+          },
+          {
+            "selector": "#a2-mission-card-progress-text",
+            "text": "50% · 2/4 단계 완료",
+            "fontPx": 24,
+            "time": 5.125,
+            "seconds": 4.875
+          },
+          {
+            "selector": "#a2-mission-card > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+            "text": "9월 30일 마감",
+            "fontPx": 24,
+            "time": 5.125,
+            "seconds": 4.875
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"승인 완료\" renders at 24 px for 4.63 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "승인 완료",
+        "selector": "#a3-badge-approved > p:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/a3.html",
+        "bbox": {
+          "x": 976,
+          "y": 617.22,
+          "width": 89,
+          "height": 28
+        },
+        "time": 10.375,
+        "times": [
+          10.375
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.625,
+        "elements": [
+          {
+            "selector": "#a3-badge-approved > p:nth-of-type(1)",
+            "text": "승인 완료",
+            "fontPx": 24,
+            "time": 10.375,
+            "seconds": 4.625
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 120
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

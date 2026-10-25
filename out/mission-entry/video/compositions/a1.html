@@ -1,0 +1,156 @@
+<template>
+<style>
+@font-face {font-family:Pretendard; font-weight:400; src:url('assets/fonts/Pretendard-Regular.otf')}
+@font-face {font-family:Pretendard; font-weight:600; src:url('assets/fonts/Pretendard-SemiBold.otf')}
+@font-face {font-family:Pretendard; font-weight:700; src:url('assets/fonts/Pretendard-Bold.otf')}
+
+* {box-sizing:border-box}
+#root {position:absolute;inset:0;font-family:Pretendard}
+.layout {display:grid;grid-template-columns:1fr 1fr;align-items:center;width:100%;height:100%}
+.phone-column {display:flex;align-items:center;justify-content:center;height:100%}
+.phone {width:390px;height:844px;border-radius:12px;box-shadow:0 4px 12px 0 #00000014;overflow:hidden}
+.phone img {display:block;width:390px;height:844px}
+.narrative {width:880px;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.headline {margin:0;color:#18191b;font-size:67.2px;font-weight:600;line-height:89.6px;letter-spacing:0}
+.subline {margin:0;color:#18191b;font-size:42px;font-weight:400;line-height:67.2px;letter-spacing:0}
+.parts {display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.part-shell {position:relative;flex:none}
+.part-scale {position:absolute;left:0;top:0;transform-origin:top left;transform:scale(2)}
+
+
+  
+  
+  
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #18191b;
+    --color-text-muted: #75777c;
+    --color-primary: #3759de;
+    --color-on-primary: #ffffff;
+    --color-character-bg: #e3f2fd;
+    --color-illustration-dce2f2: #dce2f2;
+    --color-illustration-ebeef5: #ebeef5;
+  }
+  
+  #a1-mission-card {
+    box-sizing: border-box;
+    width: 350px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-illustration-dce2f2);
+    border-radius: 12px;
+    background: var(--color-bg);
+    font-family: "Pretendard", sans-serif;
+  }
+  #a1-mission-card p { margin: 0; }
+  #a1-mission-card .cover { width: 318px; display: flex; align-items: flex-start; gap: 12px; overflow: hidden; }
+  #a1-mission-card .copy { width: 218px; display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
+  /* Text/caption */
+  #a1-mission-card .caption { font-weight: 400; font-size: 12px; line-height: 16px; white-space: pre-wrap; }
+  #a1-mission-card .eyebrow { color: var(--color-primary); }
+  /* Text/compact-title */
+  #a1-mission-card .title { font-weight: 700; font-size: 22px; line-height: 28px; color: var(--color-text); }
+  #a1-mission-card .character {
+    flex: none;
+    width: 88px;
+    height: 96px;
+    overflow: hidden;
+    background: var(--color-character-bg);
+  }
+  #a1-mission-card .character img { display: block; width: 88px; height: 96px; object-fit: contain; }
+  #a1-mission-card .deliverables { width: 318px; color: var(--color-text-muted); }
+  #a1-mission-card .progress { width: 318px; display: flex; flex-direction: column; gap: 8px; }
+  #a1-mission-card .progress-labels { display: flex; }
+  #a1-mission-card #a1-mission-card-progress-text { width: 190px; color: var(--color-primary); }
+  #a1-mission-card .due { width: 128px; color: var(--color-text-muted); text-align: right; }
+  #a1-mission-card .track {
+    position: relative;
+    width: 318px;
+    height: 3px;
+    overflow: hidden;
+    border-radius: 1.5px;
+    background: var(--color-illustration-ebeef5);
+  }
+  #a1-mission-card-progress-fill {
+    --progress: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(318px * var(--progress));
+    height: 3px;
+    border-radius: 1.5px;
+    background: var(--color-primary);
+  }
+  #a1-mission-card .button {
+    box-sizing: border-box;
+    width: 318px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary);
+  }
+  /* Text/label */
+  #a1-mission-card .button p {
+    flex: 1 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-on-primary);
+    text-align: center;
+  }
+
+.phone-column,.narrative,.part-shell{position:relative!important}
+.phone{position:relative}
+.phone img{position:absolute;left:0;top:0}
+.part-motion,.part-timing{position:absolute;inset:0}
+</style>
+<div data-hf-id="hf-nvdt" id="root" data-composition-id="a1" data-width="1920" data-height="1080"><div data-hf-id="hf-s2yi" class="layout"><div data-hf-id="hf-sy0c" id="a1-phone-clip" class="phone-column clip" data-start="0" data-duration="5" data-track-index="0"><div data-hf-id="hf-l4x6" id="a1-phone-motion" class="phone"><img data-hf-id="hf-dkv7" src="assets/03-mission.png" alt="서비스 원본 화면"></div></div>
+<div data-hf-id="hf-e0qo" id="a1-narrative" class="narrative clip" data-start="0" data-duration="5" data-track-index="1" data-hold="reading"><h1 data-hf-id="hf-4qxz" id="a1-headline" class="headline" data-var-text="a1-headline">이번 달 미션에<br data-hf-id="hf-x5px">도전해요</h1><p data-hf-id="hf-6q2r" id="a1-subline" class="subline" data-var-text="a1-subline">미션을 확인하고,<br data-hf-id="hf-rsrt">적용 사례를 준비해요.</p><div data-hf-id="hf-6fg6" class="parts"><div data-hf-id="hf-pygj" id="a1-card-shell" class="part-shell" style="width:700px;height:506px" data-source="src/parts/mission-card.html"><div data-hf-id="hf-ehlr" id="a1-card-clip" class="part-timing clip" data-start="0.24" data-duration="4.76" data-track-index="2"><div data-hf-id="hf-djes" id="a1-card-motion" class="part-motion"><div data-hf-id="hf-6itq" class="part-scale">
+  <div data-hf-id="hf-vbn1" id="a1-mission-card">
+    <div data-hf-id="hf-ze0h" class="cover">
+      <div data-hf-id="hf-bdx3" class="copy">
+        <p data-hf-id="hf-xbz1" class="caption eyebrow">이번 달 미션  ·  D–12</p>
+        <p data-hf-id="hf-b3mk" class="title">반복 업무를 줄이는<br data-hf-id="hf-szow">AI 자동화</p>
+      </div>
+      <div data-hf-id="hf-s63h" class="character"><img data-hf-id="hf-7ltk" src="assets/perdi-flag.png" alt=""></div>
+    </div>
+    <p data-hf-id="hf-41uz" class="caption deliverables">자동화 자산 1개 + 실제 적용 사례 1개</p>
+    <div data-hf-id="hf-31j5" class="progress">
+      <div data-hf-id="hf-gapn" class="progress-labels">
+        <p data-hf-id="hf-th1b" id="a1-mission-card-progress-text" class="caption">50% · 2/4 단계 완료</p>
+        <p data-hf-id="hf-smkz" class="caption due">9월 30일 마감</p>
+      </div>
+      <div data-hf-id="hf-64lp" class="track"><div data-hf-id="hf-go73" id="a1-mission-card-progress-fill"></div></div>
+    </div>
+    <div data-hf-id="hf-tqnx" id="a1-mission-card-button" class="button"><p data-hf-id="hf-zb56">적용 사례 정리하기 →</p></div>
+  </div>
+</div></div></div></div></div></div></div></div>
+<script>
+function bezier(x1,y1,x2,y2) {
+  const value=(a,b,t)=>3*(1-t)*(1-t)*t*a+3*(1-t)*t*t*b+t*t*t;
+  return p=>{
+    if(p<=0) return 0; if(p>=1) return 1;
+    let lo=0,hi=1;
+    for(let i=0;i<60;i++){let u=(lo+hi)/2;if(value(x1,x2,u)<p)lo=u;else hi=u;}
+    return value(y1,y2,(lo+hi)/2);
+  };
+}
+const enter=bezier(0,0,0.38,0.9);
+const exit=bezier(0.2,0,1,0.9);
+const emphasis=bezier(0,0,0.3,1);
+const change=bezier(0.2,0,0.38,0.9);
+
+const tl=gsap.timeline({paused:true});
+tl.fromTo("#a1-phone-motion",{y:16,opacity:0},{y:0,opacity:1,duration:0.24,ease:enter},0);
+tl.fromTo("#a1-card-motion",{y:-16,opacity:0},{y:0,opacity:1,duration:0.24,ease:enter},0.24);
+tl.to("#a1-narrative",{opacity:0,duration:0.15,ease:exit},4.85);
+window.__timelines["a1"]=tl;
+</script>
+</template>

@@ -1,0 +1,11 @@
+{
+  "name": "video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.198 preview",
+    "check": "npx --yes hyperframes@0.8.198 check",
+    "render": "npx --yes hyperframes@0.8.198 render --fps 30",
+    "publish": "npx --yes hyperframes@0.8.198 publish"
+  }
+}

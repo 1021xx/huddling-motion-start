@@ -1,0 +1,202 @@
+{
+  "hyperframes": [
+    {
+      "frame": "a1",
+      "report": "out/mission-entry/snapboard/a1/.hyperframes/artifacts/checks/a562be2f-e7e4-48f9-bece-6470042bad55.json",
+      "lint": true,
+      "runtime": true,
+      "layout": true,
+      "rawContrast": false,
+      "contrastFindings": [
+        {
+          "code": "contrast_aa_failure",
+          "severity": "error",
+          "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+          "text": "자동화 자산 1개 + 실제 적용 사례 1개",
+          "fg": "rgb(117,119,124)",
+          "bg": "rgb(255,255,255)",
+          "ratio": 4.48,
+          "requiredRatio": 4.5,
+          "suggestedColor": "rgb(116,118,123)",
+          "large": false,
+          "selector": "div > div > div:nth-of-type(2) > div > div > div > div > p",
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 994,
+            "y": 717.796875,
+            "width": 636,
+            "height": 32
+          },
+          "time": 0,
+          "times": [
+            0
+          ]
+        },
+        {
+          "code": "contrast_aa_failure",
+          "severity": "error",
+          "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+          "text": "9월 30일 마감",
+          "fg": "rgb(117,119,124)",
+          "bg": "rgb(255,255,255)",
+          "ratio": 4.48,
+          "requiredRatio": 4.5,
+          "suggestedColor": "rgb(116,118,123)",
+          "large": false,
+          "selector": "div > div > div:nth-of-type(2) > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 1374,
+            "y": 773.796875,
+            "width": 256,
+            "height": 32
+          },
+          "time": 0,
+          "times": [
+            0
+          ]
+        }
+      ],
+      "warnings": [
+        "line_unread",
+        "line_unread",
+        "line_unread",
+        "line_unread",
+        "text_below_floor"
+      ]
+    },
+    {
+      "frame": "a2",
+      "report": "out/mission-entry/snapboard/a2/.hyperframes/artifacts/checks/02cf94f8-15f4-4473-bf31-f234f2f627ff.json",
+      "lint": true,
+      "runtime": true,
+      "layout": true,
+      "rawContrast": false,
+      "contrastFindings": [
+        {
+          "code": "contrast_aa_failure",
+          "severity": "error",
+          "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+          "text": "자동화 자산 1개 + 실제 적용 사례 1개",
+          "fg": "rgb(117,119,124)",
+          "bg": "rgb(255,255,255)",
+          "ratio": 4.48,
+          "requiredRatio": 4.5,
+          "suggestedColor": "rgb(116,118,123)",
+          "large": false,
+          "selector": "div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > p",
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 994,
+            "y": 628.1875,
+            "width": 636,
+            "height": 32
+          },
+          "time": 0,
+          "times": [
+            0
+          ]
+        },
+        {
+          "code": "contrast_aa_failure",
+          "severity": "error",
+          "message": "Contrast is 4.48:1; WCAG AA requires 4.5:1.",
+          "text": "9월 30일 마감",
+          "fg": "rgb(117,119,124)",
+          "bg": "rgb(255,255,255)",
+          "ratio": 4.48,
+          "requiredRatio": 4.5,
+          "suggestedColor": "rgb(116,118,123)",
+          "large": false,
+          "selector": "div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+          "dataAttributes": {},
+          "sourceFile": "index.html",
+          "bbox": {
+            "x": 1374,
+            "y": 684.1875,
+            "width": 256,
+            "height": 32
+          },
+          "time": 0,
+          "times": [
+            0
+          ]
+        }
+      ],
+      "warnings": [
+        "line_unread",
+        "line_unread",
+        "line_unread",
+        "line_unread",
+        "line_unread",
+        "text_below_floor"
+      ]
+    },
+    {
+      "frame": "a3",
+      "report": "out/mission-entry/snapboard/a3/.hyperframes/artifacts/checks/3f339c9d-b2f4-4012-a8b1-328608434bc7.json",
+      "lint": true,
+      "runtime": true,
+      "layout": true,
+      "rawContrast": true,
+      "contrastFindings": [],
+      "warnings": [
+        "line_unread",
+        "line_unread",
+        "line_unread",
+        "text_below_floor"
+      ]
+    }
+  ],
+  "transformAwareContrastReview": {
+    "method": "Source CSS font-size times explicit uniform wrapper scale. Ratios recomputed from source colors; not a raster UI text audit.",
+    "rawToolLimitation": "contrast-audit.browser.js:386-388 classifies large text from unscaled getComputedStyle fontSize, ignoring ancestor transform scale(2).",
+    "cases": [
+      {
+        "source": "mission-card .caption / .due",
+        "localFontPx": 12,
+        "wrapperScale": 2,
+        "visibleFontPx": 24,
+        "foreground": "75777c",
+        "background": "ffffff",
+        "ratio": 4.481281912802484,
+        "requiredForLargeText": 3,
+        "pass": true
+      },
+      {
+        "source": "video headline/body",
+        "visibleFontPx": [
+          67.2,
+          42
+        ],
+        "foreground": "18191b",
+        "background": "ffffff",
+        "ratio": 17.59211398158461,
+        "pass": true
+      },
+      {
+        "source": "button-submit / mission-card .button",
+        "localFontPx": 14,
+        "wrapperScale": 2,
+        "visibleFontPx": 28,
+        "foreground": "ffffff",
+        "background": "3759de",
+        "ratio": 5.759449664281403,
+        "pass": true
+      },
+      {
+        "source": "badge-approved",
+        "localFontPx": 12,
+        "wrapperScale": 2,
+        "visibleFontPx": 24,
+        "foreground": "247a51",
+        "background": "edf1ff",
+        "ratio": 4.682929689464578,
+        "pass": true
+      }
+    ]
+  }
+}

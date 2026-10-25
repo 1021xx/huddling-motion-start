@@ -1,0 +1,145 @@
+<template>
+<style>
+@font-face {font-family:Pretendard; font-weight:400; src:url('assets/fonts/Pretendard-Regular.otf')}
+@font-face {font-family:Pretendard; font-weight:600; src:url('assets/fonts/Pretendard-SemiBold.otf')}
+@font-face {font-family:Pretendard; font-weight:700; src:url('assets/fonts/Pretendard-Bold.otf')}
+
+* {box-sizing:border-box}
+#root {position:absolute;inset:0;font-family:Pretendard}
+.layout {display:grid;grid-template-columns:1fr 1fr;align-items:center;width:100%;height:100%}
+.phone-column {display:flex;align-items:center;justify-content:center;height:100%}
+.phone {width:390px;height:844px;border-radius:12px;box-shadow:0 4px 12px 0 #00000014;overflow:hidden}
+.phone img {display:block;width:390px;height:844px}
+.narrative {width:880px;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.headline {margin:0;color:#18191b;font-size:67.2px;font-weight:600;line-height:89.6px;letter-spacing:0}
+.subline {margin:0;color:#18191b;font-size:42px;font-weight:400;line-height:67.2px;letter-spacing:0}
+.parts {display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.part-shell {position:relative;flex:none}
+.part-scale {position:absolute;left:0;top:0;transform-origin:top left;transform:scale(2)}
+
+
+  
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-primary-subtle: #edf1ff;
+    --color-success: #247a51;
+  }
+  
+  #a3-badge-approved {
+    box-sizing: border-box;
+    width: 108px;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary-subtle);
+  }
+  /* Text/caption */
+  #a3-badge-approved .label {
+    width: 92px;
+    margin: 0;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-success);
+  }
+
+
+  
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-primary: #3759de;
+    --color-on-primary: #ffffff;
+  }
+  
+  #a3-button-submit {
+    box-sizing: border-box;
+    width: 350px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary);
+  }
+  #a3-button-submit[data-state="apply-case"] { width: 318px; }
+  /* Text/label */
+  #a3-button-submit .label {
+    flex: 1 0 0;
+    min-width: 1px;
+    margin: 0;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-on-primary);
+    text-align: center;
+  }
+  #a3-button-submit .label > span { display: none; }
+  #a3-button-submit[data-state="submit"] [data-for="submit"],
+  #a3-button-submit[data-state="view-assets"] [data-for="view-assets"],
+  #a3-button-submit[data-state="add-asset"] [data-for="add-asset"],
+  #a3-button-submit[data-state="apply-case"] [data-for="apply-case"] { display: inline; }
+
+
+  
+  #a3-logo { position: relative; }
+  #a3-logo[data-state^="logotype"] { width: 149px; height: 19px; }
+  #a3-logo[data-state^="symbol"] { width: 100px; height: 100px; }
+  #a3-logo img { display: none; position: absolute; left: 0; top: 0; }
+  #a3-logo[data-state="logotype-black"] [data-for="logotype-black"],
+  #a3-logo[data-state="logotype-white"] [data-for="logotype-white"],
+  #a3-logo[data-state="symbol-black"] [data-for="symbol-black"],
+  #a3-logo[data-state="symbol-white"] [data-for="symbol-white"] { display: block; }
+
+.phone-column,.narrative,.part-shell{position:relative!important}
+.phone{position:relative}
+.phone img{position:absolute;left:0;top:0}
+.part-motion,.part-timing{position:absolute;inset:0}
+
+.screen-change{position:absolute;inset:0}
+</style>
+<div data-hf-id="hf-ihyf" id="root" data-composition-id="a3" data-width="1920" data-height="1080"><div data-hf-id="hf-s2yi" class="layout"><div data-hf-id="hf-pesa" id="a3-phone-clip" class="phone-column clip" data-start="0" data-duration="5" data-track-index="0"><div data-hf-id="hf-mb50" id="a3-phone-motion" class="phone"><img data-hf-id="hf-a9sf" src="assets/03-mission.png" alt="미션 화면"><div data-hf-id="hf-hicd" id="a3-screen-change" class="screen-change"><img data-hf-id="hf-2khu" src="assets/04-approved.png" alt="승인 화면"></div></div></div>
+<div data-hf-id="hf-5jyq" id="a3-narrative" class="narrative clip" data-start="0" data-duration="5" data-track-index="1" data-hold="reading"><h1 data-hf-id="hf-ik25" id="a3-headline" class="headline" data-var-text="a3-headline">검토 후,<br data-hf-id="hf-x5px">내 자산으로</h1><p data-hf-id="hf-v10v" id="a3-subline" class="subline" data-var-text="a3-subline">승인된 결과물이<br data-hf-id="hf-rsrt">내 자산에 등록돼요.</p><div data-hf-id="hf-6fg6" class="parts"><div data-hf-id="hf-otpp" id="a3-badge-shell" class="part-shell" style="width:216px;height:64px" data-source="src/parts/badge-approved.html"><div data-hf-id="hf-8iwm" id="a3-badge-clip" class="part-timing clip" data-start="0.15" data-duration="4.85" data-track-index="2"><div data-hf-id="hf-ijxh" id="a3-badge-motion" class="part-motion"><div data-hf-id="hf-6itq" class="part-scale">
+  <div data-hf-id="hf-2w15" id="a3-badge-approved">
+    <p data-hf-id="hf-onuy" class="label">승인 완료</p>
+  </div>
+</div></div></div></div><div data-hf-id="hf-nz62" id="a3-button-shell" class="part-shell" style="width:700px;height:88px" data-source="src/parts/button-submit.html"><div data-hf-id="hf-v0a2" id="a3-button-clip" class="part-timing clip" data-start="0.26" data-duration="4.74" data-track-index="3"><div data-hf-id="hf-kuy8" id="a3-button-motion" class="part-motion"><div data-hf-id="hf-f0sy" class="part-scale">
+  <div data-hf-id="hf-068b" id="a3-button-submit" data-state="view-assets">
+    <p data-hf-id="hf-v2lj" class="label"><span data-hf-id="hf-hg7d" data-for="submit">제출하기</span><span data-hf-id="hf-zjx4" data-for="view-assets">내 자산에서 보기</span><span data-hf-id="hf-j7hw" data-for="add-asset">＋ 새 자산 등록</span><span data-hf-id="hf-0w8l" data-for="apply-case">적용 사례 정리하기 →</span></p>
+  </div>
+  
+</div></div></div></div><div data-hf-id="hf-uv1q" id="a3-logo-shell" class="part-shell" style="width:298px;height:38px" data-source="src/parts/logo.html"><div data-hf-id="hf-p520" id="a3-logo-clip" class="part-timing clip" data-start="0.37" data-duration="4.63" data-track-index="4"><div data-hf-id="hf-l2ez" id="a3-logo-motion" class="part-motion"><div data-hf-id="hf-ff3z" class="part-scale">
+  <div data-hf-id="hf-uia7" id="a3-logo" data-state="logotype-black">
+    <img data-hf-id="hf-e1od" data-for="logotype-black" src="assets/logo-logotype-black.svg" width="149" height="19" alt="Huddling Club">
+    <img data-hf-id="hf-l11l" data-for="logotype-white" src="assets/logo-logotype-white.svg" width="149" height="19" alt="Huddling Club">
+    <img data-hf-id="hf-sya9" data-for="symbol-black" src="assets/logo-symbol-black.svg" width="100" height="100" alt="Huddling Club">
+    <img data-hf-id="hf-y1ux" data-for="symbol-white" src="assets/logo-symbol-white.svg" width="100" height="100" alt="Huddling Club">
+  </div>
+  
+</div></div></div></div></div></div></div></div>
+<script>
+function bezier(x1,y1,x2,y2) {
+  const value=(a,b,t)=>3*(1-t)*(1-t)*t*a+3*(1-t)*t*t*b+t*t*t;
+  return p=>{
+    if(p<=0) return 0; if(p>=1) return 1;
+    let lo=0,hi=1;
+    for(let i=0;i<60;i++){let u=(lo+hi)/2;if(value(x1,x2,u)<p)lo=u;else hi=u;}
+    return value(y1,y2,(lo+hi)/2);
+  };
+}
+const enter=bezier(0,0,0.38,0.9);
+const exit=bezier(0.2,0,1,0.9);
+const emphasis=bezier(0,0,0.3,1);
+const change=bezier(0.2,0,0.38,0.9);
+
+const tl=gsap.timeline({paused:true});
+tl.fromTo("#a3-screen-change",{opacity:0},{opacity:1,duration:0.15,ease:change},0);
+tl.fromTo("#a3-badge-motion",{y:-16,opacity:0},{y:0,opacity:1,duration:0.4,ease:emphasis},0.15);
+tl.fromTo("#a3-button-motion",{y:-16,opacity:0},{y:0,opacity:1,duration:0.24,ease:enter},0.26);
+tl.fromTo("#a3-logo-motion",{y:-16,opacity:0},{y:0,opacity:1,duration:0.24,ease:enter},0.37);
+window.__timelines["a3"]=tl;
+</script>
+</template>

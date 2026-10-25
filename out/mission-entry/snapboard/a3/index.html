@@ -1,0 +1,116 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>A3 · 정착 상태</title><style>
+@font-face {font-family:Pretendard; font-weight:400; src:url('assets/fonts/Pretendard-Regular.otf')}
+@font-face {font-family:Pretendard; font-weight:600; src:url('assets/fonts/Pretendard-SemiBold.otf')}
+@font-face {font-family:Pretendard; font-weight:700; src:url('assets/fonts/Pretendard-Bold.otf')}
+html,body {margin:0;width:1920px;height:1080px;overflow:hidden;background:#ffffff}
+* {box-sizing:border-box}
+#root {position:relative;width:1920px;height:1080px;background:#ffffff;font-family:Pretendard}
+.layout {display:grid;grid-template-columns:1fr 1fr;align-items:center;width:100%;height:100%}
+.phone-column {display:flex;align-items:center;justify-content:center;height:100%}
+.phone {width:390px;height:844px;border-radius:12px;box-shadow:0 4px 12px 0 #00000014;overflow:hidden}
+.phone img {display:block;width:390px;height:844px}
+.narrative {width:880px;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.headline {margin:0;color:#18191b;font-size:67.2px;font-weight:600;line-height:89.6px;letter-spacing:0}
+.subline {margin:0;color:#18191b;font-size:42px;font-weight:400;line-height:67.2px;letter-spacing:0}
+.parts {display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.part-shell {position:relative;flex:none}
+.part-scale {position:absolute;left:0;top:0;transform-origin:top left;transform:scale(2)}
+
+
+  
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-primary-subtle: #edf1ff;
+    --color-success: #247a51;
+  }
+  
+  #badge-approved {
+    box-sizing: border-box;
+    width: 108px;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary-subtle);
+  }
+  /* Text/caption */
+  #badge-approved .label {
+    width: 92px;
+    margin: 0;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-success);
+  }
+
+
+  
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-primary: #3759de;
+    --color-on-primary: #ffffff;
+  }
+  
+  #button-submit {
+    box-sizing: border-box;
+    width: 350px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary);
+  }
+  #button-submit[data-state="apply-case"] { width: 318px; }
+  /* Text/label */
+  #button-submit .label {
+    flex: 1 0 0;
+    min-width: 1px;
+    margin: 0;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-on-primary);
+    text-align: center;
+  }
+  #button-submit .label > span { display: none; }
+  #button-submit[data-state="submit"] [data-for="submit"],
+  #button-submit[data-state="view-assets"] [data-for="view-assets"],
+  #button-submit[data-state="add-asset"] [data-for="add-asset"],
+  #button-submit[data-state="apply-case"] [data-for="apply-case"] { display: inline; }
+
+
+  
+  #logo { position: relative; }
+  #logo[data-state^="logotype"] { width: 149px; height: 19px; }
+  #logo[data-state^="symbol"] { width: 100px; height: 100px; }
+  #logo img { display: none; position: absolute; left: 0; top: 0; }
+  #logo[data-state="logotype-black"] [data-for="logotype-black"],
+  #logo[data-state="logotype-white"] [data-for="logotype-white"],
+  #logo[data-state="symbol-black"] [data-for="symbol-black"],
+  #logo[data-state="symbol-white"] [data-for="symbol-white"] { display: block; }
+</style></head><body>
+<div id="root" data-composition-id="a3-still" data-width="1920" data-height="1080" data-duration="0.7" data-no-timeline>
+<div class="layout"><div class="phone-column"><div class="phone"><img src="assets/04-approved.png" alt="서비스 원본 화면"></div></div>
+<div class="narrative"><h1 class="headline">검토 후,<br>내 자산으로</h1><p class="subline">승인된 결과물이<br>내 자산에 등록돼요.</p><div class="parts"><div class="part-shell" style="width:216px;height:64px" data-source="src/parts/badge-approved.html"><div class="part-scale">
+  <div id="badge-approved">
+    <p class="label">승인 완료</p>
+  </div>
+</div></div><div class="part-shell" style="width:700px;height:88px" data-source="src/parts/button-submit.html"><div class="part-scale">
+  <div id="button-submit" data-state="view-assets">
+    <p class="label"><span data-for="submit">제출하기</span><span data-for="view-assets">내 자산에서 보기</span><span data-for="add-asset">＋ 새 자산 등록</span><span data-for="apply-case">적용 사례 정리하기 →</span></p>
+  </div>
+  
+</div></div><div class="part-shell" style="width:298px;height:38px" data-source="src/parts/logo.html"><div class="part-scale">
+  <div id="logo" data-state="logotype-black">
+    <img data-for="logotype-black" src="assets/logo-logotype-black.svg" width="149" height="19" alt="Huddling Club">
+    <img data-for="logotype-white" src="assets/logo-logotype-white.svg" width="149" height="19" alt="Huddling Club">
+    <img data-for="symbol-black" src="assets/logo-symbol-black.svg" width="100" height="100" alt="Huddling Club">
+    <img data-for="symbol-white" src="assets/logo-symbol-white.svg" width="100" height="100" alt="Huddling Club">
+  </div>
+  
+</div></div></div></div></div></div>
+</body></html>
