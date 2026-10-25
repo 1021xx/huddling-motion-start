@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
   src/parts/stat-card.html — 이번 달 수익 카드 (Figma 195:636 · StatCard · 허들링 B안 공통 컴포넌트)
-  크기: 350×81 (피그마 레이어 값 그대로, docs/design.md 4장). 위쪽 선 1px
+  크기: 350×101 (피그마 레이어 값 그대로). 안쪽 여백 20 (space-page) · 간격 12 · 모서리 12 (radius-card) · 위쪽 선 1px
+  글자 폭: 피그마는 350이지만 내용 영역 310(350 − 여백 20×2)에 맞춤 (요청 2026-10-25)
   상태: 없음 (피그마에 variant 없음)
   숫자: #stat-card-amount span의 textContent만 바꾼다. ₩는 span 밖 (src/patterns/count-up.html)
     data-final = 최종값. tabular-nums 등 카운트업용 설정은 장면에서 더한다 (부품은 피그마 그대로)
@@ -23,18 +24,19 @@
   #stat-card {
     box-sizing: border-box;
     width: 350px;
-    padding-top: 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     overflow: hidden;
     border-top: 1px solid var(--color-border);
+    border-radius: 12px;
     background: var(--color-bg);
     color: var(--color-text);
     font-family: "Pretendard", sans-serif;
     white-space: pre-wrap;
   }
-  #stat-card p { margin: 0; }
+  #stat-card p { width: 310px; margin: 0; }
   /* Text/section */
   #stat-card .heading { font-weight: 700; font-size: 20px; line-height: 28px; }
   /* Text/label */

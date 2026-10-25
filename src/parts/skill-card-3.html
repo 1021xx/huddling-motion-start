@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
   src/parts/skill-card-3.html — 스킬 카드 3 (Figma 195:633 · SkillCard · 허들링 B안 공통 컴포넌트)
-  크기: 350×48 (피그마 레이어 값 그대로, docs/design.md 4장)
+  크기: 350×88 (피그마 레이어 값 그대로). 안쪽 여백 20 (space-page) · 간격 12 · 모서리 12 (radius-card)
+  글자 칸 266은 피그마 그대로 (여백 20이 생겨 내용 영역 310보다 40 넘침, 피그마도 잘림 · 지금 문구는 짧아 안 보임)
   일러스트: src/assets/buddy-front-1.png (Character / buddy-front, 회색 아기 펭귄, skill-card-1과 같은 파일). 감싸기만 하고 고치지 않는다
   상태: 없음 (피그마에 variant 없음)
 -->
@@ -21,11 +22,14 @@
   }
   html, body { margin: 0; background: transparent; }
   .skill-card {
+    box-sizing: border-box;
     width: 350px;
+    padding: 20px;
     display: flex;
     align-items: flex-start;
     gap: 12px;
     overflow: hidden;
+    border-radius: 12px;
     background: var(--color-bg);
     font-family: "Pretendard", sans-serif;
   }
@@ -37,7 +41,7 @@
     background: var(--color-character-bg);
   }
   .skill-card .character img { display: block; width: 72px; height: 48px; object-fit: contain; }
-  .skill-card .copy { width: 266px; display: flex; flex-direction: column; gap: 4px; overflow: hidden; }
+  .skill-card .copy { flex: none; width: 266px; display: flex; flex-direction: column; gap: 4px; overflow: hidden; }
   .skill-card p { margin: 0; }
   /* Text/list-title */
   .skill-card .title { font-weight: 600; font-size: 15px; line-height: 22px; color: var(--color-text); }
