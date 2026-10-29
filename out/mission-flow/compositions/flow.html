@@ -1,0 +1,124 @@
+<template>
+<style>
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Bold.otf');font-weight:700}
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-SemiBold.otf');font-weight:600}
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Regular.otf');font-weight:400}
+*{box-sizing:border-box}#root{position:absolute;inset:0;overflow:hidden;background:#fff;color:#18191b;font-family:Pretendard;--blue:#3759de;--tint:#edf1ff}p{margin:0}.obj{position:absolute}.blue{color:var(--blue)}.kicker{font-size:33.6px;line-height:44.8px;font-weight:600}.big{font-size:156.8px;line-height:190.4px;font-weight:700;white-space:nowrap}.headline{font-size:78.4px;line-height:95.2px;font-weight:700}.body{font-size:42px;line-height:67.2px}.mask{overflow:hidden}.word{display:inline-block}.full{inset:0}.logo{width:298px;height:38px}.rule{height:12px;background:var(--blue);border-radius:6px;transform-origin:left center}
+#brand{left:192px;top:108px}#chapter{right:192px;top:105px;font-size:30.8px;line-height:44.8px;font-weight:600;color:#3759de}
+#intro{left:510px;top:240px}#mission{left:510px;top:365px;transform-origin:left top}#verb-mask{left:870px;top:365px;width:600px;height:200px}#verb{color:#18191b}#line{left:510px;top:585px;width:780px}#intro-note{left:510px;top:650px}
+#card{left:610px;top:300px;width:700px;transform-origin:center center}#card img{width:700px;display:block}#mission-sub{left:1050px;top:330px}#results{left:1050px;top:425px;width:690px;height:100px}#plus{left:1050px;top:540px}#cases{left:1050px;top:630px;width:690px;height:100px}#submit-copy{left:1050px;top:785px}
+#send-stage{left:0;top:0;width:1920px;height:1080px}#send-label{left:350px;top:365px}#send{left:610px;top:600px;width:700px;height:88px;transform-origin:center center}#send img{width:700px;height:88px;display:block}#send-caption{left:660px;top:755px}#send-rule{left:610px;top:720px;width:700px}
+#flood{inset:0;background:#3759de;transform-origin:center center}#review-label{left:550px;top:260px;color:#fff}#review-mask{left:550px;top:375px;width:1000px;height:200px}#review-word{color:#fff}#review-small{left:550px;top:650px;color:#fff}#review-line{left:550px;top:610px;width:820px;background:#fff}
+#white-door{inset:0;background:#fff;transform-origin:left center}#approved-title{left:350px;top:335px;width:1100px;height:205px}#approved-word{color:#3759de}#badge{left:350px;top:600px;width:324px;height:96px}#buddy{left:1190px;top:330px;width:350px;height:420px;object-fit:contain}#approved-small{left:350px;top:740px}#result-line{left:350px;top:560px;width:670px}
+#asset{left:435px;top:590px;width:1050px;transform-origin:center center}#asset img{width:1050px;display:block}#asset-title{left:435px;top:340px;width:1200px;height:200px}#asset-word{color:#3759de}#asset-note{left:435px;top:830px}
+#end{inset:0;background:#edf1ff}#end-kicker{left:310px;top:260px}#end-line-one{left:310px;top:340px;width:1300px;height:200px}#end-line-two{left:310px;top:525px;width:1300px;height:200px}#end-logo{left:310px;top:810px;width:447px;height:57px}#end-buddy{left:1380px;top:660px;width:240px;height:260px;object-fit:contain}
+</style>
+<div data-hf-id="hf-5cgv" id="root" data-composition-id="flow" data-width="1920" data-height="1080">
+<img data-hf-id="hf-3jg4" id="brand" class="obj logo" src="assets/logo-logotype-black.svg" alt="HuddlingClub">
+<p data-hf-id="hf-hge9" id="chapter" data-layout-allow-occlusion class="obj" data-var-text="chapter">미션에서 내 자산까지</p>
+<p data-hf-id="hf-t2i2" id="intro" class="obj kicker blue" data-var-text="intro">이번 달,</p>
+<p data-hf-id="hf-3cpr" id="mission" class="obj big blue" data-var-text="mission">미션</p>
+<div data-hf-id="hf-v81h" id="verb-mask" class="obj mask"><p data-hf-id="hf-nip8" id="verb" data-layout-allow-overflow class="big" data-var-text="verb">해볼까?</p></div>
+<div data-hf-id="hf-lnl2" id="line" class="obj rule" data-layout-ignore></div>
+<p data-hf-id="hf-l04j" id="intro-note" class="obj body" data-var-text="intro-note">작은 도전의 시작.</p>
+<div data-hf-id="hf-4wh2" id="card" class="obj" data-layout-allow-overflow><img data-hf-id="hf-jez6" src="assets/mission-card.png" alt="원본 미션 카드"></div>
+<p data-hf-id="hf-2v1r" id="mission-sub" class="obj kicker blue">준비할 것은</p>
+<div data-hf-id="hf-3uf7" id="results" class="obj mask"><p data-hf-id="hf-ic2z" id="results-word" data-layout-allow-overflow class="headline">결과물 하나</p></div>
+<p data-hf-id="hf-78u1" id="plus" class="obj headline blue">+</p>
+<div data-hf-id="hf-9it2" id="cases" class="obj mask"><p data-hf-id="hf-n6ou" id="cases-word" data-layout-allow-overflow class="headline">실제 적용 사례</p></div>
+<p data-hf-id="hf-cxjw" id="submit-copy" class="obj body">함께 제출해요.</p>
+<div data-hf-id="hf-m59m" id="send-stage" class="obj">
+<div data-hf-id="hf-qjws" id="send-label" class="obj big"><span data-hf-id="hf-afd1" id="send-a" data-layout-allow-occlusion class="word">준비됐다면,</span> <span data-hf-id="hf-xt8m" id="send-b" data-layout-allow-occlusion class="word blue">제출.</span></div>
+<div data-hf-id="hf-yfzb" id="send" class="obj"><img data-hf-id="hf-c662" src="assets/button-submit.png" alt="제출하기"></div>
+<div data-hf-id="hf-aimd" id="send-rule" class="obj rule" data-layout-ignore></div>
+<p data-hf-id="hf-5ksd" id="send-caption" data-layout-allow-occlusion class="obj body">결과물과 적용 사례를 함께</p>
+</div>
+<div data-hf-id="hf-66mw" id="flood" class="obj" data-layout-ignore></div>
+<p data-hf-id="hf-ufrw" id="review-label" data-layout-allow-occlusion class="obj kicker">제출한 결과물은</p>
+<div data-hf-id="hf-gxi8" id="review-mask" class="obj mask"><p data-hf-id="hf-ale3" id="review-word" data-layout-allow-overflow data-layout-allow-occlusion class="big">검토를 거쳐</p></div>
+<div data-hf-id="hf-mbbv" id="review-line" class="obj rule" data-layout-ignore></div>
+<p data-hf-id="hf-5noh" id="review-small" data-layout-allow-occlusion class="obj body">다음 단계로 이어집니다.</p>
+<div data-hf-id="hf-6jfg" id="white-door" class="obj" data-layout-ignore></div>
+<div data-hf-id="hf-pvuf" id="approved-title" class="obj mask"><p data-hf-id="hf-hqdo" id="approved-word" data-layout-allow-overflow class="big">승인 완료!</p></div>
+<div data-hf-id="hf-3qfu" id="result-line" class="obj rule" data-layout-ignore></div>
+<img data-hf-id="hf-36zi" id="badge" class="obj" src="assets/badge-approved.png" alt="원본 승인 완료 배지">
+<img data-hf-id="hf-fvv7" id="buddy" class="obj" src="assets/buddy-front-1.png" alt="허들링 캐릭터">
+<p data-hf-id="hf-g0bu" id="approved-small" class="obj body">승인된 결과물이</p>
+<div data-hf-id="hf-orhc" id="asset-title" class="obj mask"><p data-hf-id="hf-o0h4" id="asset-word" data-layout-allow-occlusion class="big">내 자산으로.</p></div>
+<div data-hf-id="hf-t1if" id="asset" class="obj"><img data-hf-id="hf-mssc" src="assets/asset-card.png" alt="원본 내 자산 카드"></div>
+<p data-hf-id="hf-e4o9" id="asset-note" data-layout-allow-occlusion class="obj body">경험이 쌓여요.</p>
+<div data-hf-id="hf-pcx4" id="end" class="obj"></div>
+<p data-hf-id="hf-lusz" id="end-kicker" class="obj kicker blue">HUDDLING CLUB</p>
+<div data-hf-id="hf-uvkm" id="end-line-one" class="obj mask"><p data-hf-id="hf-79no" id="end-one" data-layout-allow-overflow class="big">오늘의 도전이</p></div>
+<div data-hf-id="hf-8uqg" id="end-line-two" class="obj mask"><p data-hf-id="hf-tncu" id="end-two" data-layout-allow-overflow class="big blue">나의 자산으로.</p></div>
+<img data-hf-id="hf-qufr" id="end-logo" class="obj" src="assets/logo-logotype-black.svg" alt="HuddlingClub">
+<img data-hf-id="hf-1hqp" id="end-buddy" class="obj" src="assets/perdi-flag.png" alt="깃발 든 허들링 캐릭터">
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+const hide=['#card','#mission-sub','#results','#plus','#cases','#submit-copy','#send-stage','#flood','#review-label','#review-mask','#review-line','#review-small','#white-door','#approved-title','#result-line','#badge','#buddy','#approved-small','#asset-title','#asset','#asset-note','#end','#end-kicker','#end-line-one','#end-line-two','#end-logo','#end-buddy'];
+tl.set(hide,{opacity:0},0);
+tl.fromTo('#mission',{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.4,ease:'power3.out'},0);
+tl.fromTo('#intro',{opacity:0},{opacity:1,duration:.24},0);
+tl.fromTo('#verb',{yPercent:110},{yPercent:0,duration:.7,ease:'expo.out'},.65);
+tl.fromTo('#line',{scaleX:0},{scaleX:1,duration:.7,ease:'power3.inOut'},.35);
+tl.fromTo('#intro-note',{opacity:0},{opacity:1,duration:.24},.6);
+// The opening word becomes the persistent chapter heading, while the underline opens the card.
+tl.to('#mission',{x:-230,y:-140,scale:.5,duration:.7,ease:'power3.inOut'},1.8);
+tl.to('#verb',{yPercent:-110,duration:.4,ease:'power3.in'},1.8);
+tl.to(['#intro','#intro-note'],{opacity:0,duration:.15},1.85);
+tl.to('#line',{x:-230,y:-265,scaleX:1.74,duration:.7,ease:'power3.inOut'},1.8);
+tl.set('#card',{opacity:1},2);
+tl.fromTo('#card',{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.7,ease:'power3.inOut'},2);
+tl.to('#card',{x:-330,duration:.7,ease:'power3.inOut'},2.95);
+tl.set(['#mission-sub','#results'],{opacity:1},3.1);
+tl.fromTo('#results-word',{x:690},{x:0,duration:.7,ease:'expo.out'},3.1);
+tl.set('#plus',{opacity:1},3.85);
+tl.fromTo('#plus',{rotation:90,scale:.5},{rotation:0,scale:1,duration:.4,ease:'power3.out'},3.85);
+tl.set('#cases',{opacity:1},4.05);
+tl.fromTo('#cases-word',{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.7,ease:'power3.out'},4.05);
+tl.to('#submit-copy',{opacity:1,duration:.24},4.65);
+// Shared horizontal direction: the card exits as the submission stage enters.
+tl.to(['#card','#mission','#mission-sub','#results','#plus','#cases','#submit-copy','#line'],{x:'-=1920',duration:.7,ease:'power3.inOut'},5.15);
+tl.set('#send-stage',{opacity:1},5.15);
+tl.fromTo('#send-stage',{x:1920},{x:0,duration:.7,ease:'power3.inOut'},5.15);
+tl.fromTo('#send-b',{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.4},6.05);
+tl.fromTo('#send-rule',{scaleX:0},{scaleX:1,duration:.7,ease:'power3.inOut'},6.05);
+tl.to('#send',{scale:.96,duration:.11,ease:'power2.out'},6.85);
+tl.to('#send',{scale:1,duration:.24,ease:'power2.out'},6.96);
+// The button's blue fills the frame; the review line then wipes into the approval state.
+tl.set('#flood',{opacity:1,clipPath:'inset(55.56% 31.77% 36.30% 31.77% round 16px)'},7.1);
+tl.to('#flood',{clipPath:'inset(0% 0% 0% 0% round 0px)',duration:.7,ease:'power3.inOut'},7.1);
+tl.set(['#review-label','#review-mask','#review-line','#review-small'],{opacity:1},7.65);
+tl.fromTo('#review-word',{yPercent:110},{yPercent:0,duration:.7,ease:'expo.out'},7.65);
+tl.fromTo('#review-line',{scaleX:0},{scaleX:1,duration:.7,ease:'power3.inOut'},8.05);
+tl.fromTo('#review-small',{opacity:0},{opacity:1,duration:.24},8.25);
+tl.set('#white-door',{opacity:1,scaleX:0},8.85);
+tl.to('#white-door',{scaleX:1,duration:.7,ease:'power3.inOut'},8.85);
+tl.set(['#approved-title','#result-line'],{opacity:1},9.15);
+tl.fromTo('#approved-word',{x:-1000},{x:0,duration:.7,ease:'expo.out'},9.15);
+tl.fromTo('#result-line',{scaleX:0},{scaleX:1,duration:.4},9.4);
+tl.fromTo('#badge',{opacity:0},{opacity:1,duration:.4},9.65);
+tl.fromTo('#buddy',{opacity:0,x:300,rotation:8},{opacity:1,x:0,rotation:0,duration:.7,ease:'power3.out'},9.6);
+tl.to('#approved-small',{opacity:1,duration:.24},9.65);
+tl.to(['#approved-title','#result-line','#badge','#buddy','#approved-small'],{x:'-=1920',duration:.7,ease:'power3.inOut'},10.6);
+tl.set(['#asset-title','#asset','#asset-note'],{opacity:1},10.6);
+tl.fromTo(['#asset-title','#asset','#asset-note'],{x:1920},{x:0,duration:.7,ease:'power3.inOut'},10.6);
+tl.fromTo('#asset-word',{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:.4},11.1);
+tl.set('#end',{opacity:1,clipPath:'inset(100% 0 0 0)'},12.05);
+tl.to('#end',{clipPath:'inset(0% 0 0 0)',duration:.7,ease:'power3.inOut'},12.05);
+tl.set(['#end-kicker','#end-line-one','#end-line-two','#end-logo','#end-buddy'],{opacity:1},12.45);
+tl.fromTo('#end-one',{yPercent:110},{yPercent:0,duration:.7,ease:'expo.out'},12.45);
+tl.fromTo('#end-two',{yPercent:110},{yPercent:0,duration:.7,ease:'expo.out'},12.65);
+tl.fromTo('#end-logo',{opacity:0},{opacity:1,duration:.4},13.05);
+tl.fromTo('#end-buddy',{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)',duration:.4},13.15);
+// Retire finished layers so inspection and future edits cannot expose stale content.
+tl.set('#verb-mask',{opacity:0},2.2);
+tl.set(['#card','#mission','#mission-sub','#results','#plus','#cases','#submit-copy','#line'],{opacity:0},5.85);
+tl.set(['#send-stage','#chapter','#brand'],{opacity:0},7.8);
+tl.set(['#review-label','#review-mask','#review-line','#review-small'],{opacity:0},9.55);
+tl.set(['#approved-title','#result-line','#badge','#buddy','#approved-small'],{opacity:0},11.3);
+tl.set(['#asset-title','#asset','#asset-note'],{opacity:0},12.75);
+window.__timelines=window.__timelines||{};window.__timelines.flow=tl;
+</script>
+</template>

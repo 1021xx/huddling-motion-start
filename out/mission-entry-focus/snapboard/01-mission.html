@@ -1,0 +1,119 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>미션을 고르고</title><style>
+@font-face{font-family:Pretendard;src:url(assets/fonts/Pretendard-Regular.otf);font-weight:400}
+@font-face{font-family:Pretendard;src:url(assets/fonts/Pretendard-SemiBold.otf);font-weight:600}
+@font-face{font-family:Pretendard;src:url(assets/fonts/Pretendard-Bold.otf);font-weight:700}
+*{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#fff;font-family:Pretendard;color:#18191b}
+.stage{position:relative;width:1920px;height:1080px}.stage > .eyebrow{position:absolute;left:192px;top:108px;margin:0;font-size:30.8px;line-height:44.8px;font-weight:600;color:#3759de}
+.headline{margin:0;position:absolute;font-size:78.4px;line-height:95.2px;font-weight:700}
+.body{margin:0;position:absolute;font-size:42px;line-height:67.2px;font-weight:400}
+.scaled{position:absolute;transform-origin:top left}.logo{position:absolute;left:192px;bottom:108px;width:298px;height:38px}
+.foot{position:absolute;right:192px;bottom:108px;font-size:30.8px;line-height:44.8px;color:#3759de;margin:0;font-weight:600}
+</style></head><body><main class="stage"><p class="eyebrow">이번 달 미션</p><h1 class="headline" style="left:192px;top:248px">이번 달 미션,<br>지금 시작해요.</h1><p class="body" style="left:192px;top:508px">미션을 확인하고,<br>적용 사례를 준비해요.</p><div class="scaled" style="left:1028px;top:248px;transform:scale(2)"><style>
+  @font-face { font-family: "Pretendard"; font-weight: 400; src: url("assets/fonts/Pretendard-Regular.otf") format("opentype"); }
+  @font-face { font-family: "Pretendard"; font-weight: 600; src: url("assets/fonts/Pretendard-SemiBold.otf") format("opentype"); }
+  @font-face { font-family: "Pretendard"; font-weight: 700; src: url("assets/fonts/Pretendard-Bold.otf") format("opentype"); }
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #18191b;
+    --color-text-muted: #75777c;
+    --color-primary: #3759de;
+    --color-on-primary: #ffffff;
+    --color-character-bg: #e3f2fd;
+    --color-illustration-dce2f2: #dce2f2;
+    --color-illustration-ebeef5: #ebeef5;
+  }
+  
+  #mission-card {
+    box-sizing: border-box;
+    width: 350px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-illustration-dce2f2);
+    border-radius: 12px;
+    background: var(--color-bg);
+    font-family: "Pretendard", sans-serif;
+  }
+  #mission-card p { margin: 0; }
+  #mission-card .cover { width: 318px; display: flex; align-items: flex-start; gap: 12px; overflow: hidden; }
+  #mission-card .copy { width: 218px; display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
+  /* Text/caption */
+  #mission-card .caption { font-weight: 400; font-size: 12px; line-height: 16px; white-space: pre-wrap; }
+  #mission-card .eyebrow { color: var(--color-primary); }
+  /* Text/compact-title */
+  #mission-card .title { font-weight: 700; font-size: 22px; line-height: 28px; color: var(--color-text); }
+  #mission-card .character {
+    flex: none;
+    width: 88px;
+    height: 96px;
+    overflow: hidden;
+    background: var(--color-character-bg);
+  }
+  #mission-card .character img { display: block; width: 88px; height: 96px; object-fit: contain; }
+  #mission-card .deliverables { width: 318px; color: var(--color-text-muted); }
+  #mission-card .progress { width: 318px; display: flex; flex-direction: column; gap: 8px; }
+  #mission-card .progress-labels { display: flex; }
+  #mission-card #mission-card-progress-text { width: 190px; color: var(--color-primary); }
+  #mission-card .due { width: 128px; color: var(--color-text-muted); text-align: right; }
+  #mission-card .track {
+    position: relative;
+    width: 318px;
+    height: 3px;
+    overflow: hidden;
+    border-radius: 1.5px;
+    background: var(--color-illustration-ebeef5);
+  }
+  #mission-card-progress-fill {
+    --progress: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(318px * var(--progress));
+    height: 3px;
+    border-radius: 1.5px;
+    background: var(--color-primary);
+  }
+  #mission-card .button {
+    box-sizing: border-box;
+    width: 318px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-primary);
+  }
+  /* Text/label */
+  #mission-card .button p {
+    flex: 1 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-on-primary);
+    text-align: center;
+  }
+</style>
+  <div id="mission-card">
+    <div class="cover">
+      <div class="copy">
+        <p class="caption eyebrow">이번 달 미션  ·  D–12</p>
+        <p class="title">반복 업무를 줄이는<br>AI 자동화</p>
+      </div>
+      <div class="character"><img src="assets/perdi-flag.png" alt=""></div>
+    </div>
+    <p class="caption deliverables">자동화 자산 1개 + 실제 적용 사례 1개</p>
+    <div class="progress">
+      <div class="progress-labels">
+        <p id="mission-card-progress-text" class="caption">50% · 2/4 단계 완료</p>
+        <p class="caption due">9월 30일 마감</p>
+      </div>
+      <div class="track"><div id="mission-card-progress-fill"></div></div>
+    </div>
+    <div id="mission-card-button" class="button"><p>적용 사례 정리하기 →</p></div>
+  </div>
+</div></main></body></html>
+

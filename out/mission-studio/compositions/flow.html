@@ -1,0 +1,113 @@
+<template>
+<style>
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-SemiBold.otf');font-weight:600}
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Bold.otf');font-weight:700}
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Regular.otf');font-weight:400}
+*{box-sizing:border-box}#root{position:absolute;inset:0;overflow:hidden;background:#f7f7f8;font-family:Pretendard;color:#18191b;perspective:2200px}p{margin:0}.obj{position:absolute}.mask{overflow:hidden}.title{font-size:112px;line-height:140px;font-weight:600;letter-spacing:0}.small{font-size:33.6px;line-height:44.8px;font-weight:400;color:#75777c}.blue{color:#3759de}.full{inset:0}.copy{left:200px;top:164px;width:1520px;height:160px;text-align:center}.card{transform-style:preserve-3d;transform-origin:center center;border-radius:24px;box-shadow:0 36px 72px -24px #18191b26,0 4px 8px #18191b0a;background:#fff;overflow:hidden}.card img{display:block;width:100%;height:auto}.asset{width:910px;border-radius:20px;box-shadow:0 30px 80px -30px #18191b30,0 2px 3px #18191b08;overflow:hidden;background:#f7f7f8}.asset img{width:100%;display:block}
+#ambient{background:radial-gradient(ellipse at 50% 64%,#fff 15%,#f7f7f8 68%)}
+#floor{left:420px;top:884px;width:1080px;height:90px;background:radial-gradient(ellipse,#18191b15,transparent 67%)}
+#logo{left:128px;top:90px;width:223.5px;height:28.5px}
+#heading1,#heading2,#heading3,#heading4{inset:0;position:absolute}
+#mission{left:575px;top:385px;width:770px}
+#mini1{left:1050px;top:440px;width:700px}#mini2{left:1050px;top:675px;width:700px}
+#ingredients{left:450px;top:875px;width:1020px;text-align:center}
+#submit{left:505px;top:755px;width:910px;transform-origin:center center;border-radius:20.8px;box-shadow:0 16px 36px -12px #3759de40;overflow:hidden}#submit img{width:910px;display:block}
+#review-stage{inset:0;background:radial-gradient(ellipse at 50% 58%,#fff,#f7f7f8 75%)}
+#review-copy{left:200px;top:160px;width:1520px;text-align:center}
+#seal-shadow{left:660px;top:850px;width:600px;height:65px;background:radial-gradient(ellipse,#3759de20,transparent 68%)}
+#seal{left:810px;top:370px;width:300px;height:300px;transform-style:preserve-3d;border-radius:50%;background:linear-gradient(145deg,#6b84ed,#3759de 62%,#2946bb);box-shadow:inset 0 4px 4px #ffffff90,inset 0 -8px 12px #1b329755,0 24px 45px -15px #3759de55;display:flex;align-items:center;justify-content:center}#seal svg{width:138px;height:138px}
+#approved{left:200px;top:740px;width:1520px;text-align:center;font-size:78.4px;line-height:95.2px;font-weight:600;color:#3759de}
+#gallery-title{left:200px;top:160px;width:1520px;text-align:center}
+#gallery{left:0;top:0;width:1920px;height:1080px;perspective:2200px}
+#ga{left:505px;top:425px}#gb{left:505px;top:425px}#gc{left:505px;top:425px}
+#gallery-caption{left:400px;top:870px;width:1120px;text-align:center}
+#end-stage{inset:0;background:radial-gradient(ellipse at 65% 52%,#fff,#f7f7f8 76%)}
+#end-copy{left:252px;top:346px;font-size:112px;line-height:145px;font-weight:600;width:1200px}#end-copy span{display:block}
+#end-logo{left:260px;top:750px;width:298px;height:38px}
+#end-symbol{left:1350px;top:435px;width:235px;height:235px;transform-style:preserve-3d}
+</style>
+<div data-hf-id="hf-5cgv" id="root" data-composition-id="flow" data-width="1920" data-height="1080">
+<div data-hf-id="hf-4m2r" id="ambient" class="obj full" data-layout-ignore=""></div>
+<div data-hf-id="hf-ff7q" id="floor" class="obj" data-layout-ignore=""></div>
+<img data-hf-id="hf-hdsf" id="logo" class="obj" src="assets/logo-logotype-black.svg" alt="HuddlingClub">
+<div data-hf-id="hf-n9fi" id="heading" class="obj copy mask"><p data-hf-id="hf-wa4c" id="heading1" data-layout-allow-overflow="" class="title">작은 도전.</p><p data-hf-id="hf-iej8" id="heading2" data-layout-allow-overflow="" class="title">직접 만들고.</p><p data-hf-id="hf-sli6" id="heading3" data-layout-allow-overflow="" class="title">경험을 담아.</p><p data-hf-id="hf-0mzy" id="heading4" data-layout-allow-overflow="" class="title blue">제출하면.</p></div>
+<div data-hf-id="hf-2lj1" id="mission" class="obj card"><img data-hf-id="hf-d2ig" src="assets/mission-card.png" alt="이번 달 미션"></div>
+<div data-hf-id="hf-qn6h" id="mini1" class="obj asset"><img data-hf-id="hf-9afl" src="assets/asset-private-image.png" alt="회의록 자동 정리 템플릿"></div>
+<div data-hf-id="hf-ulai" id="mini2" class="obj asset"><img data-hf-id="hf-zfii" src="assets/asset-private-file.png" alt="주간 보고서 작성 도우미"></div>
+<p data-hf-studio-original-inline-translate="" style="translate: 0px 99.453px" data-hf-id="hf-67ff" id="ingredients" class="obj small">직접 만든 결과물을 준비해요.</p>
+<div data-hf-id="hf-n9x5" id="submit" class="obj"><img data-hf-id="hf-c662" src="assets/button-submit.png" alt="제출하기"></div>
+<div data-hf-id="hf-xuz8" id="review-stage" class="obj"></div>
+<p data-hf-id="hf-rvms" id="review-copy" class="obj title">검토를 거쳐,</p>
+<div data-hf-id="hf-82lw" id="seal-shadow" class="obj" data-layout-ignore=""></div>
+<div data-hf-id="hf-ogtj" id="seal" class="obj" data-layout-ignore=""><svg data-hf-id="hf-fr3h" viewBox="0 0 140 140" fill="none"><path data-hf-id="hf-5hhc" id="tick" d="M31 72 L57 98 L111 43" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" pathLength="1" /></svg></div>
+<p style="font-weight: 900" data-hf-id="hf-vesa" id="approved" class="obj">승인 완료.</p>
+<p data-hf-id="hf-a5ns" id="gallery-title" class="obj title">나의 자산이 됩니다.</p>
+<div data-hf-id="hf-vkxx" id="gallery" class="obj"><div data-hf-id="hf-qsb7" id="gc" class="obj asset"><img data-hf-id="hf-7ua6" src="assets/asset-private-file.png" alt="주간 보고서 작성 도우미"></div><div data-hf-id="hf-mu76" id="gb" class="obj asset"><img data-hf-id="hf-z0x3" src="assets/asset-review.png" alt="리서치 비교표 템플릿"></div><div data-hf-id="hf-iw35" id="ga" class="obj asset"><img data-hf-id="hf-9yf9" src="assets/asset-private-image.png" alt="회의록 자동 정리 템플릿"></div></div>
+<p data-hf-id="hf-j37s" id="gallery-caption" class="obj small"></p>
+<div data-hf-id="hf-vhep" id="end-stage" class="obj"></div>
+<p data-hf-id="hf-5dkz" id="end-copy" class="obj"><span data-hf-id="hf-j139" id="end-a">오늘의 도전,</span><span data-hf-id="hf-kj3j" id="end-b" class="blue">내일의 자산.</span></p>
+<img data-hf-id="hf-qufr" id="end-logo" class="obj" src="assets/logo-logotype-black.svg" alt="HuddlingClub">
+<img data-hf-id="hf-wm8v" id="end-symbol" class="obj" src="assets/logo-symbol-black.svg" alt="허들링 심볼">
+</div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.set("#seal", { x: 0, y: 44.201, data: "hf-hold" }, 0);
+
+const hidden=['#heading2','#heading3','#heading4','#mini1','#mini2','#ingredients','#submit','#review-stage','#review-copy','#seal-shadow','#seal','#approved','#gallery-title','#gallery','#gallery-caption','#end-stage','#end-copy','#end-logo','#end-symbol'];
+tl.set(hidden,{opacity:0},0);
+tl.fromTo('#heading1',{opacity:0,y:45},{opacity:1,y:0,duration:.7,ease:'power3.out'},0);
+tl.fromTo('#mission',{y:260,rotationX:24,rotationY:-18,rotationZ:-5,scale:1.08,opacity:0},{y:0,rotationX:8,rotationY:0,rotationZ:0,scale:1,opacity:1,duration:1.2,ease:'power3.out'},.15);
+tl.fromTo('#floor',{scale:.65,opacity:0},{scale:1,opacity:1,duration:1.2},.15);
+// One product stays on stage. Each change of camera reveals a new relationship.
+tl.to('#heading1',{y:-145,opacity:0,duration:.4,ease:'power3.in'},1.8);
+tl.fromTo('#heading2',{y:145,opacity:1},{y:0,duration:.7,ease:'expo.out'},1.95);
+tl.to('#mission',{x:-345,y:20,scale:.85,rotationY:-14,rotationZ:-4,duration:1,ease:'power3.inOut'},1.9);
+tl.fromTo('#mini1',{x:400,y:40,rotationY:18,rotationZ:5,opacity:0},{x:0,y:0,rotationY:-8,rotationZ:2,opacity:1,duration:.9,ease:'power3.out'},2.3);
+tl.fromTo('#mini2',{x:400,y:40,rotationY:18,rotationZ:5,opacity:0},{x:0,y:0,rotationY:-8,rotationZ:2,opacity:1,duration:.9,ease:'power3.out'},2.65);
+tl.to('#heading2',{y:-145,opacity:0,duration:.4,ease:'power3.in'},3.65);
+tl.fromTo('#heading3',{y:145,opacity:1},{y:0,duration:.7,ease:'expo.out'},3.8);
+tl.to('#mission',{x:-1500,rotationY:20,opacity:0,duration:.8,ease:'power3.in'},3.8);
+tl.to('#mini1',{x:-545,y:-40,rotationY:0,rotationZ:-3,scale:1.3,duration:1,ease:'power3.inOut'},3.8);
+tl.to('#mini2',{x:-545,y:-60,rotationY:0,rotationZ:3,scale:1.3,duration:1,ease:'power3.inOut'},3.95);
+tl.to('#ingredients',{opacity:1,duration:.4},3.25);
+tl.to('#heading3',{y:-145,opacity:0,duration:.4,ease:'power3.in'},5.1);
+tl.fromTo('#heading4',{y:145,opacity:1},{y:0,duration:.7,ease:'expo.out'},5.25);
+tl.to('#mini1',{y:-75,rotationZ:0,scale:1.12,duration:.7,ease:'power3.inOut'},5.25);
+tl.to('#mini2',{y:-110,rotationZ:0,scale:1.12,duration:.7,ease:'power3.inOut'},5.25);
+tl.to('#ingredients',{opacity:0,duration:.15},6.85);
+tl.fromTo('#submit',{y:90,scale:.9,opacity:0},{y:0,scale:1,opacity:1,duration:.7,ease:'expo.out'},5.5);
+tl.to('#submit',{scale:.97,duration:.11},6.5);
+tl.to('#submit',{scale:1,duration:.24,ease:'power3.out'},6.61);
+tl.to(['#mini1','#mini2','#submit'],{z:800,opacity:0,duration:.55,ease:'power3.in'},6.85);
+tl.to('#heading4',{opacity:0,duration:.24},6.9);
+tl.to('#review-stage',{opacity:1,duration:.4},7.05);
+tl.fromTo('#review-copy',{opacity:0,y:35},{opacity:1,y:0,duration:.7,ease:'power3.out'},7.2);
+tl.fromTo('#seal',{opacity:0,rotationY:-75,rotationZ:-14,scale:.65},{opacity:1,rotationY:0,rotationZ:0,scale:1,duration:1,ease:'power3.out'},7.35);
+tl.fromTo('#seal-shadow',{opacity:0,scale:.5},{opacity:1,scale:1,duration:1},7.35);
+tl.fromTo('#tick',{strokeDasharray:1,strokeDashoffset:1},{strokeDashoffset:0,duration:.55,ease:'power2.inOut'},7.95);
+tl.fromTo('#approved',{opacity:0,y:25},{opacity:1,y:0,duration:.7,ease:'power3.out'},8.2);
+tl.to(['#review-copy','#approved'],{opacity:0,y:-30,duration:.4},9.2);
+tl.to('#seal',{ keyframes: { "0%": { scale: 1, x: 0, y: 44.201, opacity: 1 }, "3.238%": { scale: 1, x: 0, y: 0, opacity: 1, ease: "none" }, "100%": { scale: 0.3, x: -590, y: 140, opacity: 0 }, easeEach: "power3.inOut" }, duration: 0.827 },9.173);
+tl.to('#seal-shadow',{opacity:0,duration:.4},9.2);
+tl.fromTo('#gallery-title',{opacity:0,y:35},{opacity:1,y:0,duration:.7,ease:'power3.out'},9.5);
+tl.set('#gallery',{opacity:1},9.55);
+tl.fromTo('#ga',{y:200,rotationX:40,scale:.6,opacity:0},{y:0,rotationX:0,scale:1,opacity:1,duration:.85,ease:'power3.out'},9.55);
+tl.fromTo('#gb',{y:220,rotationX:40,scale:.6,opacity:0},{x:60,y:155,rotationX:0,rotationZ:3,scale:.94,opacity:1,duration:1,ease:'power3.out'},9.7);
+tl.fromTo('#gc',{y:240,rotationX:40,scale:.6,opacity:0},{x:110,y:295,rotationX:0,rotationZ:5,scale:.88,opacity:1,duration:1,ease:'power3.out'},9.85);
+tl.to('#gallery-caption',{opacity:1,duration:.4},10.5);
+tl.to('#gallery',{x:-75,rotationY:-9,duration:.9,ease:'power3.inOut'},11.1);
+tl.to(['#gallery-title','#gallery-caption'],{opacity:0,duration:.3},11.95);
+tl.to('#gallery',{scale:1.6,z:700,opacity:0,duration:.8,ease:'power3.in'},12);
+tl.to('#end-stage',{opacity:1,duration:.55},12.2);
+tl.set('#end-copy',{opacity:1},12.45);
+tl.fromTo('#end-a',{opacity:0,y:35},{opacity:1,y:0,duration:.7,ease:'power3.out'},12.45);
+tl.fromTo('#end-b',{opacity:0,y:35},{opacity:1,y:0,duration:.7,ease:'power3.out'},12.6);
+tl.fromTo('#end-logo',{opacity:0},{opacity:1,duration:.7},12.65);
+tl.fromTo('#end-symbol',{opacity:0,rotationY:-60,scale:.85},{opacity:1,rotationY:0,scale:1,duration:.9,ease:'power3.out'},12.5);
+tl.set(['#heading','#mission','#mini1','#mini2','#ingredients','#submit','#logo','#floor'],{opacity:0},7.45);
+tl.set(['#review-copy','#seal','#seal-shadow','#approved'],{opacity:0},10.05);
+tl.set(['#gallery-title','#gallery','#gallery-caption'],{opacity:0},12.8);
+window.__timelines=window.__timelines||{};window.__timelines.flow=tl;
+</script>
+</template>
+

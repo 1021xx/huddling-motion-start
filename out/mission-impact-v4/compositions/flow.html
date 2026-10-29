@@ -1,0 +1,271 @@
+<template>
+<style>
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-SemiBold.otf');font-weight:600}
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Bold.otf');font-weight:700}
+@font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Regular.otf');font-weight:400}
+*{box-sizing:border-box}#root{position:absolute;inset:0;overflow:hidden;background:#f7f7f8;font-family:Pretendard;color:#18191b;perspective:2200px}p{margin:0}.obj{position:absolute}.mask{overflow:hidden}.title{font-size:112px;line-height:140px;font-weight:600;letter-spacing:0}.small{font-size:33.6px;line-height:44.8px;font-weight:400;color:#75777c}.blue{color:#3759de}.full{inset:0}.copy{left:200px;top:164px;width:1520px;height:160px;text-align:center}.card{transform-style:preserve-3d;transform-origin:center center;border-radius:24px;box-shadow:0 36px 72px -24px #18191b26,0 4px 8px #18191b0a;background:#fff;overflow:hidden}.card img{display:block;width:100%;height:auto}.asset{width:910px;border-radius:20px;box-shadow:0 30px 80px -30px #18191b30,0 2px 3px #18191b08;overflow:hidden;background:#f7f7f8}.asset img{width:100%;display:block}
+#ambient{background:radial-gradient(ellipse at 50% 64%,#fff 15%,#f7f7f8 68%)}
+#floor{left:420px;top:884px;width:1080px;height:90px;background:radial-gradient(ellipse,#18191b15,transparent 67%)}
+#logo{left:128px;top:90px;width:223.5px;height:28.5px}
+#heading1,#heading2,#heading3,#heading4{inset:0;position:absolute}
+#mission{left:575px;top:385px;width:770px}
+#mini1{left:1050px;top:440px;width:700px}#mini2{left:1050px;top:675px;width:700px}
+#ingredients{left:450px;top:875px;width:1020px;text-align:center}
+#submit{left:505px;top:755px;width:910px;transform-origin:center center;border-radius:20.8px;box-shadow:0 16px 36px -12px #3759de40;overflow:hidden}#submit img{width:910px;display:block}
+#review-stage{inset:0;background:radial-gradient(ellipse at 50% 58%,#fff,#f7f7f8 75%)}
+#review-copy{left:200px;top:160px;width:1520px;text-align:center}
+#seal-shadow{left:660px;top:850px;width:600px;height:65px;background:radial-gradient(ellipse,#3759de20,transparent 68%)}
+#seal{left:810px;top:370px;width:300px;height:300px;transform-style:preserve-3d;border-radius:50%;background:linear-gradient(145deg,#6b84ed,#3759de 62%,#2946bb);box-shadow:inset 0 4px 4px #ffffff90,inset 0 -8px 12px #1b329755,0 24px 45px -15px #3759de55;display:flex;align-items:center;justify-content:center}#seal svg{width:138px;height:138px}
+#approved{left:200px;top:740px;width:1520px;text-align:center;font-size:78.4px;line-height:95.2px;font-weight:600;color:#3759de}
+#gallery-title{left:200px;top:160px;width:1520px;text-align:center}
+#gallery{left:0;top:0;width:1920px;height:1080px;perspective:2200px}
+#ga{left:505px;top:425px}#gb{left:505px;top:425px}#gc{left:505px;top:425px}
+#gallery-caption{left:400px;top:870px;width:1120px;text-align:center}
+#end-stage{inset:0;background:radial-gradient(ellipse at 65% 52%,#fff,#f7f7f8 76%)}
+#end-copy{left:252px;top:346px;font-size:112px;line-height:145px;font-weight:600;width:1200px}#end-copy span{display:block}
+#end-logo{left:260px;top:750px;width:298px;height:38px}
+#end-symbol{left:1350px;top:435px;width:235px;height:235px;transform-style:preserve-3d}
+
+  @font-face { font-family: "Pretendard"; font-weight: 400; src: url("assets/fonts/Pretendard-Regular.otf") format("opentype"); }
+  @font-face { font-family: "Pretendard"; font-weight: 600; src: url("assets/fonts/Pretendard-SemiBold.otf") format("opentype"); }
+  @font-face { font-family: "Pretendard"; font-weight: 700; src: url("assets/fonts/Pretendard-Bold.otf") format("opentype"); }
+  /* 토큰 (docs/design.md 1장) */
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #18191b;
+    --color-text-muted: #75777c;
+    --color-primary: #3759de;
+    --color-on-primary: #ffffff;
+    --color-character-bg: #e3f2fd;
+    --color-illustration-dce2f2: #dce2f2;
+    --color-illustration-ebeef5: #ebeef5;
+  }
+  
+  #live-mission {
+    box-sizing: border-box;
+    width: 770px;
+    padding: 35.2px;
+    display: flex;
+    flex-direction: column;
+    gap: 26.4px;
+    overflow: hidden;
+    border: 2.2px solid var(--color-illustration-dce2f2);
+    border-radius: 26.4px;
+    background: var(--color-bg);
+    font-family: "Pretendard", sans-serif;
+  }
+  #live-mission p { margin: 0; }
+  #live-mission .mc-cover { width: 699.6px; display: flex; align-items: flex-start; gap: 26.4px; overflow: hidden; }
+  #live-mission .mc-copy { width: 479.6px; display: flex; flex-direction: column; gap: 17.6px; overflow: hidden; }
+  /* Text/caption */
+  #live-mission .mc-caption { font-weight: 400; font-size: 26.4px; line-height: 35.2px; white-space: pre-wrap; }
+  #live-mission .mc-eyebrow { color: var(--color-primary); }
+  /* Text/compact-title */
+  #live-mission .mc-title { font-weight: 700; font-size: 48.4px; line-height: 61.6px; color: var(--color-text); }
+  #live-mission .mc-character {
+    flex: none;
+    width: 193.6px;
+    height: 211.2px;
+    overflow: hidden;
+    background: var(--color-character-bg);
+  }
+  #live-mission .mc-character img { display: block; width: 193.6px; height: 211.2px; object-fit: contain; }
+  #live-mission .mc-deliverables { width: 699.6px; color: var(--color-text-muted); }
+  #live-mission .mc-progress { width: 699.6px; display: flex; flex-direction: column; gap: 17.6px; }
+  #live-mission .mc-progress-labels { display: flex; }
+  #live-mission #live-mission-progress-text { width: 418px; color: var(--color-primary); }
+  #live-mission .mc-due { width: 281.6px; color: var(--color-text-muted); text-align: right; }
+  #live-mission .mc-track {
+    position: relative;
+    width: 699.6px;
+    height: 6.6px;
+    overflow: hidden;
+    border-radius: 3.3px;
+    background: var(--color-illustration-ebeef5);
+  }
+  #live-mission-progress-fill {
+    --progress: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(699.6px * var(--progress));
+    height: 6.6px;
+    border-radius: 3.3px;
+    background: var(--color-primary);
+  }
+  #live-mission .mc-button {
+    box-sizing: border-box;
+    width: 699.6px;
+    padding: 26.4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 17.6px;
+    background: var(--color-primary);
+  }
+  /* Text/label */
+  #live-mission .mc-button p {
+    flex: 1 0 0;
+    font-weight: 600;
+    font-size: 30.8px;
+    line-height: 44px;
+    color: var(--color-on-primary);
+    text-align: center;
+  }
+
+#mission{height:556.6px}#live-mission{transform-origin:top left}#live-mission-progress-fill{width:699.6px;transform-origin:left center}
+
+#cursor{position:absolute;left:0;top:0;width:66px;height:84px;transform-origin:0 0;filter:drop-shadow(0 5px 4px #18191b30)}
+#click-ring{position:absolute;left:989px;top:769px;width:72px;height:72px;border:3px solid #ffffff;border-radius:50%;pointer-events:none}
+#celebration{position:absolute;inset:0;pointer-events:none} .confetto{position:absolute;left:960px;top:564px;width:10px;height:22px;border-radius:2px}
+#seal-ring{position:absolute;left:790px;top:394px;width:340px;height:340px;border:3px solid #3759de;border-radius:50%;pointer-events:none}
+
+#ingredients{top:915px!important;translate:0 0!important;color:#50535c}
+#review-stage{background:radial-gradient(ellipse at 50% 56%,#142451 0%,#090d17 43%,#050609 76%)}
+#review-copy{color:#fff;top:150px;font-size:78.4px;line-height:100px}
+#seal{box-shadow:inset 0 4px 5px #ffffffaa,inset 0 -12px 22px #132a8b80,0 0 80px #3759de70,0 30px 80px #00000080}
+#approved{top:820px;font-size:100px;line-height:120px;color:#fff}
+#seal-ring{border-color:#7795ff;left:790px;top:350px}
+.confetto{top:520px}
+#gallery-title{color:#fff;top:145px}
+#gallery .asset{box-shadow:0 30px 75px #00000070,0 0 45px #3759de26;border:1px solid #ffffff80}
+#end-stage{background:radial-gradient(ellipse at 68% 55%,#172c66 0%,#0b1225 32%,#050609 74%)}
+#end-copy{left:250px;top:380px;color:#fff;font-size:112px;line-height:150px;width:1420px}
+#end-copy .blue{color:#8daaff}#end-logo{left:260px;top:240px;width:372.5px;height:47.5px}
+#end-symbol{left:1410px;top:755px;width:130px;height:130px}
+#portal{position:absolute;inset:0;background:#3759de}
+#orbit{position:absolute;left:610px;top:170px;width:700px;height:700px;border-radius:50%;border:1px solid #6b84ed55;box-shadow:0 0 90px #3759de20,inset 0 0 90px #3759de10}
+#orbit:after{content:"";position:absolute;inset:-90px;border:1px solid #6b84ed22;border-radius:50%}
+
+#submit{background:#3759de}
+#review-copy{top:270px;font-size:64px}
+#approved{top:420px;left:200px;width:1520px;height:260px;line-height:250px;font-size:210px;font-weight:700!important;display:flex;justify-content:center;gap:48px;overflow:hidden}
+#approved span{display:inline-block;transform-origin:center center}
+#approved .done{color:#8daaff}
+#end-copy{top:390px;width:1100px;font-size:104px;line-height:150px}
+#end-b{transform-origin:left center}
+#end-symbol{left:1370px;top:620px;width:130px;height:130px}
+</style>
+<div data-hf-id="hf-5cgv" id="root" data-composition-id="flow" data-width="1920" data-height="1080">
+<div data-hf-id="hf-4m2r" id="ambient" class="obj full" data-layout-ignore=""></div>
+<div data-hf-id="hf-ff7q" id="floor" class="obj" data-layout-ignore=""></div>
+<img data-hf-id="hf-hdsf" id="logo" class="obj" src="assets/logo-logotype-black.svg" alt="HuddlingClub">
+<div data-hf-id="hf-n9fi" id="heading" class="obj copy mask"><p data-hf-id="hf-wa4c" id="heading1" data-layout-allow-overflow="" class="title">작은 도전.</p><p data-hf-id="hf-iej8" id="heading2" data-layout-allow-overflow="" class="title">결과물을 만들고.</p><p data-hf-id="hf-sli6" id="heading3" data-layout-allow-overflow="" class="title">경험을 더하고.</p><p data-hf-id="hf-0mzy" id="heading4" data-layout-allow-overflow="" class="title blue">한 번의 제출.</p></div>
+<div data-hf-id="hf-2lj1" id="mission" class="obj card"><div data-hf-id="hf-smbe" id="live-mission">
+    <div data-hf-id="hf-ukza" class="mc-cover">
+      <div data-hf-id="hf-am2m" class="mc-copy">
+        <p data-hf-id="hf-bfjr" class="mc-caption mc-eyebrow">이번 달 미션  ·  D–12</p>
+        <p data-hf-id="hf-lcv1" class="mc-title">반복 업무를 줄이는<br data-hf-id="hf-x5px">AI 자동화</p>
+      </div>
+      <div data-hf-id="hf-nql2" class="mc-character"><img data-hf-id="hf-7ltk" src="assets/perdi-flag.png" alt=""></div>
+    </div>
+    <p data-hf-id="hf-2ccl" class="mc-caption mc-deliverables">자동화 자산 1개 + 실제 적용 사례 1개</p>
+    <div data-hf-id="hf-8fos" class="mc-progress">
+      <div data-hf-id="hf-opsg" class="mc-progress-labels">
+        <p data-hf-id="hf-hnm9" id="live-mission-progress-text" class="mc-caption">50% · 2/4 단계 완료</p>
+        <p data-hf-id="hf-2svl" class="mc-caption mc-due">9월 30일 마감</p>
+      </div>
+      <div data-hf-id="hf-3gwu" class="mc-track"><div data-hf-id="hf-8q94" id="live-mission-progress-fill"></div></div>
+    </div>
+    <div data-hf-id="hf-ltpt" id="live-mission-button" class="mc-button"><p data-hf-id="hf-zb56">적용 사례 정리하기 →</p></div>
+  </div></div>
+<div data-hf-id="hf-qn6h" id="mini1" class="obj asset"><img data-hf-id="hf-9afl" src="assets/asset-private-image.png" alt="회의록 자동 정리 템플릿"></div>
+<div data-hf-id="hf-ulai" id="mini2" class="obj asset"><img data-hf-id="hf-zfii" src="assets/asset-private-file.png" alt="주간 보고서 작성 도우미"></div>
+<p data-hf-studio-original-inline-translate="" style="translate: 0px 99.453px" data-hf-id="hf-67ff" id="ingredients" class="obj small">실제 적용 사례와 함께 제출해요.</p>
+<div data-hf-id="hf-n9x5" id="submit" class="obj"><img data-hf-id="hf-c662" src="assets/button-submit.png" alt="제출하기"></div>
+<div data-hf-id="hf-tt57" id="click-ring" data-layout-ignore></div><svg data-hf-id="hf-1t54" id="cursor" data-layout-ignore viewBox="0 0 66 84"><path data-hf-id="hf-94zl" d="M5 4 L5 65 L21 51 L34 78 L45 72 L31 46 L54 44 Z" fill="#18191b" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/></svg>
+<div data-hf-id="hf-e91m" id="portal" data-layout-ignore></div><div data-hf-id="hf-xuz8" id="review-stage" class="obj"></div>
+<div data-hf-id="hf-70nc" id="orbit" data-layout-ignore></div><p data-hf-id="hf-rvms" id="review-copy" class="obj title">검토를 거쳐,</p>
+<div data-hf-id="hf-82lw" id="seal-shadow" class="obj" data-layout-ignore=""></div>
+<div data-hf-id="hf-7w1u" id="seal-ring" data-layout-ignore></div><div data-hf-id="hf-ebsc" id="celebration" data-layout-ignore><i data-hf-id="hf-zxc9" id="confetti-0" class="confetto" style="background:#3759de;width:8px;height:14px"></i><i data-hf-id="hf-2nk5" id="confetti-1" class="confetto" style="background:#6b84ed;width:10px;height:18px"></i><i data-hf-id="hf-r9cf" id="confetti-2" class="confetto" style="background:#a9b8f5;width:12px;height:22px"></i><i data-hf-id="hf-ovq4" id="confetti-3" class="confetto" style="background:#c4a86b;width:8px;height:26px"></i><i data-hf-id="hf-alz2" id="confetti-4" class="confetto" style="background:#3759de;width:10px;height:14px"></i><i data-hf-id="hf-89jf" id="confetti-5" class="confetto" style="background:#6b84ed;width:12px;height:18px"></i><i data-hf-id="hf-1hpu" id="confetti-6" class="confetto" style="background:#a9b8f5;width:8px;height:22px"></i><i data-hf-id="hf-a1nj" id="confetti-7" class="confetto" style="background:#c4a86b;width:10px;height:26px"></i><i data-hf-id="hf-jvqw" id="confetti-8" class="confetto" style="background:#3759de;width:12px;height:14px"></i><i data-hf-id="hf-qo0g" id="confetti-9" class="confetto" style="background:#6b84ed;width:8px;height:18px"></i><i data-hf-id="hf-isma" id="confetti-10" class="confetto" style="background:#a9b8f5;width:10px;height:22px"></i><i data-hf-id="hf-zirm" id="confetti-11" class="confetto" style="background:#c4a86b;width:12px;height:26px"></i><i data-hf-id="hf-07cc" id="confetti-12" class="confetto" style="background:#3759de;width:8px;height:14px"></i><i data-hf-id="hf-61r2" id="confetti-13" class="confetto" style="background:#6b84ed;width:10px;height:18px"></i><i data-hf-id="hf-rld4" id="confetti-14" class="confetto" style="background:#a9b8f5;width:12px;height:22px"></i><i data-hf-id="hf-l3dt" id="confetti-15" class="confetto" style="background:#c4a86b;width:8px;height:26px"></i><i data-hf-id="hf-cbd9" id="confetti-16" class="confetto" style="background:#3759de;width:10px;height:14px"></i><i data-hf-id="hf-uigo" id="confetti-17" class="confetto" style="background:#6b84ed;width:12px;height:18px"></i><i data-hf-id="hf-m9y7" id="confetti-18" class="confetto" style="background:#a9b8f5;width:8px;height:22px"></i><i data-hf-id="hf-az04" id="confetti-19" class="confetto" style="background:#c4a86b;width:10px;height:26px"></i><i data-hf-id="hf-tn5s" id="confetti-20" class="confetto" style="background:#3759de;width:12px;height:14px"></i><i data-hf-id="hf-v2js" id="confetti-21" class="confetto" style="background:#6b84ed;width:8px;height:18px"></i><i data-hf-id="hf-gv6x" id="confetti-22" class="confetto" style="background:#a9b8f5;width:10px;height:22px"></i><i data-hf-id="hf-ahbh" id="confetti-23" class="confetto" style="background:#c4a86b;width:12px;height:26px"></i><i data-hf-id="hf-hos5" id="confetti-24" class="confetto" style="background:#3759de;width:8px;height:14px"></i><i data-hf-id="hf-iiap" id="confetti-25" class="confetto" style="background:#6b84ed;width:10px;height:18px"></i><i data-hf-id="hf-lvwr" id="confetti-26" class="confetto" style="background:#a9b8f5;width:12px;height:22px"></i><i data-hf-id="hf-jaeg" id="confetti-27" class="confetto" style="background:#c4a86b;width:8px;height:26px"></i><i data-hf-id="hf-marm" id="confetti-28" class="confetto" style="background:#3759de;width:10px;height:14px"></i><i data-hf-id="hf-n2c7" id="confetti-29" class="confetto" style="background:#6b84ed;width:12px;height:18px"></i><i data-hf-id="hf-tqq5" id="confetti-30" class="confetto" style="background:#a9b8f5;width:8px;height:22px"></i><i data-hf-id="hf-rf9e" id="confetti-31" class="confetto" style="background:#c4a86b;width:10px;height:26px"></i><i data-hf-id="hf-4qaj" id="confetti-32" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-3u8z" id="confetti-33" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-vyki" id="confetti-34" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-nekp" id="confetti-35" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i><i data-hf-id="hf-m1o7" id="confetti-36" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-r947" id="confetti-37" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-e3ym" id="confetti-38" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-qflh" id="confetti-39" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i><i data-hf-id="hf-sgao" id="confetti-40" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-l320" id="confetti-41" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-jo6l" id="confetti-42" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-mysm" id="confetti-43" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i><i data-hf-id="hf-sy84" id="confetti-44" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-uqz8" id="confetti-45" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-dvld" id="confetti-46" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-lsx6" id="confetti-47" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i><i data-hf-id="hf-1j88" id="confetti-48" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-rru8" id="confetti-49" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-9ewo" id="confetti-50" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-1163" id="confetti-51" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i><i data-hf-id="hf-lpdt" id="confetti-52" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-glgp" id="confetti-53" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-rf8k" id="confetti-54" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-n45z" id="confetti-55" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i><i data-hf-id="hf-dkst" id="confetti-56" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-bjn1" id="confetti-57" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-r2u8" id="confetti-58" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-wusj" id="confetti-59" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i><i data-hf-id="hf-yle2" id="confetti-60" class="confetto" style="background:#3759de;width:10px;height:18px"></i><i data-hf-id="hf-7mr6" id="confetti-61" class="confetto" style="background:#8daaff;width:10px;height:18px"></i><i data-hf-id="hf-igar" id="confetti-62" class="confetto" style="background:#ffffff;width:10px;height:18px"></i><i data-hf-id="hf-ylww" id="confetti-63" class="confetto" style="background:#c4a86b;width:10px;height:18px"></i></div>
+<div data-hf-id="hf-ogtj" id="seal" class="obj" data-layout-ignore=""><svg data-hf-id="hf-fr3h" viewBox="0 0 140 140" fill="none"><path data-hf-id="hf-5hhc" id="tick" d="M31 72 L57 98 L111 43" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" pathLength="1" /></svg></div>
+<p style="font-weight: 900" data-hf-id="hf-vesa" id="approved" class="obj" data-layout-allow-overflow><span id="approval-word">승인</span><span id="done-word" class="done">완료.</span></p>
+<p data-hf-id="hf-a5ns" id="gallery-title" class="obj title">나의 자산이 됩니다.</p>
+<div data-hf-id="hf-vkxx" id="gallery" data-layout-allow-overflow class="obj"><div data-hf-id="hf-qsb7" id="gc" class="obj asset"><img data-hf-id="hf-7ua6" src="assets/asset-private-file.png" alt="주간 보고서 작성 도우미"></div><div data-hf-id="hf-mu76" id="gb" class="obj asset"><img data-hf-id="hf-z0x3" src="assets/asset-review.png" alt="리서치 비교표 템플릿"></div><div data-hf-id="hf-iw35" id="ga" class="obj asset"><img data-hf-id="hf-9yf9" src="assets/asset-private-image.png" alt="회의록 자동 정리 템플릿"></div></div>
+<p data-hf-id="hf-j37s" id="gallery-caption" class="obj small"></p>
+<div data-hf-id="hf-vhep" id="end-stage" class="obj"></div>
+<p data-hf-id="hf-5dkz" id="end-copy" class="obj"><span data-hf-id="hf-j139" id="end-a">도전이 쌓일수록,</span><span data-hf-id="hf-kj3j" id="end-b" class="blue">가능성은 더 크게.</span></p>
+<img data-hf-id="hf-qufr" id="end-logo" class="obj" src="assets/logo-logotype-white.svg" alt="HuddlingClub">
+<img data-hf-id="hf-wm8v" id="end-symbol" class="obj" src="assets/logo-symbol-white.svg" alt="허들링 심볼">
+</div>
+<script>
+
+const tl=gsap.timeline({paused:true});
+const hidden=['#heading2','#heading3','#heading4','#mini1','#mini2','#ingredients','#submit','#review-stage','#review-copy','#seal-shadow','#seal','#approved','#gallery-title','#gallery','#gallery-caption','#end-stage','#end-copy','#end-logo','#end-symbol','#cursor','#click-ring','#seal-ring','.confetto','#portal','#orbit'];
+tl.set(hidden,{opacity:0},0);
+// Pull out from the actual mission: establish what the viewer is acting on.
+tl.fromTo('#mission',{scale:1.9,y:230,rotationX:14,opacity:0},{scale:1,y:0,rotationX:0,opacity:1,duration:1.1,ease:'power3.out'},0);
+tl.fromTo('#heading1',{opacity:0,y:35},{opacity:1,y:0,duration:.8,ease:'power2.out'},.35);
+tl.fromTo('#floor',{opacity:0,scale:.6},{opacity:1,scale:1,duration:1},0);
+// Move in to the real progress region as it fills; stop at the source value.
+tl.to('#heading1',{opacity:0,y:-35,duration:.4},1.65);
+tl.to('#mission',{scale:1.65,y:-240,rotationX:0,duration:.8,ease:'power3.inOut'},1.7);
+tl.set('#live-mission-progress-fill',{scaleX:0},0);
+tl.set('#live-mission-progress-text',{textContent:'0% · 0/4 단계 완료'},0);
+tl.to('#live-mission-progress-fill',{scaleX:.5,duration:1.5,ease:'none'},1.05);
+for(let i=0;i<=50;i++)tl.set('#live-mission-progress-text',{textContent:i+'% · '+Math.floor(i/25)+'/4 단계 완료'},1.05+i*1.5/50);
+// The same card moves aside to make room for the work it leads to.
+tl.to('#mission',{scale:.76,x:-370,y:0,rotationY:-15,rotationZ:-5,duration:.85,ease:'power3.inOut'},3);
+tl.fromTo('#heading2',{opacity:0,y:35},{opacity:1,y:0,duration:.8,ease:'power2.out'},3.65);
+tl.fromTo('#mini1',{x:420,rotationY:-28,opacity:0},{x:0,rotationY:-8,opacity:1,duration:.8,ease:'power3.out'},3.3);
+tl.fromTo('#mini2',{x:420,rotationY:-28,opacity:0},{x:0,rotationY:-8,opacity:1,duration:.8,ease:'power3.out'},3.6);
+tl.to('#heading2',{opacity:0,y:-30,duration:.4},4.65);
+tl.fromTo('#heading3',{opacity:0,y:30},{opacity:1,y:0,duration:.7,ease:'power2.out'},4.85);
+tl.to('#mission',{x:-1500,rotationY:25,opacity:0,duration:.65,ease:'power3.in'},4.85);
+tl.to('#mini1',{x:-545,y:-75,scale:1.12,rotationY:0,duration:.85,ease:'power3.inOut'},4.85);
+tl.to('#mini2',{x:-545,y:-110,scale:1.12,rotationY:0,duration:.85,ease:'power3.inOut'},5);
+tl.to('#ingredients',{opacity:1,duration:.45},4.9);
+// The click is the cause of the next transition, not a decorative cursor pass.
+tl.to('#heading3',{opacity:0,y:-30,duration:.35},6);
+tl.fromTo('#heading4',{opacity:0,y:30},{opacity:1,y:0,duration:.7,ease:'power2.out'},6.2);
+tl.fromTo('#submit',{y:65,scale:.95,opacity:0},{y:0,scale:1,opacity:1,duration:.65,ease:'power3.out'},5.8);
+tl.fromTo('#cursor',{x:1520,y:940,opacity:0},{x:1025,y:805,opacity:1,duration:.8,ease:'power2.inOut'},6.35);
+tl.to('#submit',{scale:.94,duration:.12},7.25);
+tl.to('#cursor',{scale:.86,duration:.12},7.25);
+tl.to('#submit',{scale:1.08,duration:.13,ease:'power3.out'},7.37);
+tl.to('#cursor',{scale:1,opacity:0,duration:.22},7.37);
+tl.fromTo('#click-ring',{opacity:.8,scale:.4},{opacity:0,scale:1.7,duration:.4},7.25);
+// Enlarge the actual clicked button. No detached transition rectangle.
+tl.set('#submit',{zIndex:20},7.37);
+tl.to('#submit img',{opacity:0,duration:.2},7.4);
+tl.to('#submit',{scale:23,y:-270,duration:.7,ease:'power3.in'},7.5);
+tl.to(['#heading','#mini1','#mini2','#ingredients'],{opacity:0,duration:.3},7.65);
+tl.set(['#heading','#mission','#mini1','#mini2','#ingredients','#logo','#floor'],{opacity:0},8.2);
+tl.set('#submit',{opacity:0},8.2);
+tl.set('#review-stage',{opacity:1},8.2);
+// Words take over the approval: a slot reveal, then a single punch-in.
+tl.fromTo('#review-copy',{opacity:0,y:20},{opacity:1,y:0,duration:.55,ease:'power2.out'},8.25);
+tl.set('#approved',{opacity:1},8.6);
+tl.fromTo('#approval-word',{y:270,rotationZ:7},{y:0,rotationZ:0,duration:.65,ease:'power3.out'},8.6);
+tl.fromTo('#done-word',{y:-270,rotationZ:-7},{y:0,rotationZ:0,duration:.65,ease:'power3.out'},9.0);
+tl.to('#approved',{scale:1.12,duration:.2,ease:'power2.out'},9.7);
+tl.to('#approved',{scale:1,duration:.35,ease:'power2.inOut'},9.9);
+// Approval resolves into accumulated assets; the camera pulls out to show the group.
+tl.to(['#review-copy','#approved'],{opacity:0,duration:.35},11.55);
+tl.fromTo('#gallery-title',{opacity:0,y:30},{opacity:1,y:0,duration:.8,ease:'power2.out'},12.1);
+tl.set('#gallery',{opacity:1},12.15);
+tl.fromTo('#ga',{scale:1.8,rotationY:24,y:130,opacity:0},{scale:1,rotationY:0,y:0,opacity:1,duration:.85,ease:'power3.out'},12.15);
+tl.fromTo('#gb',{x:200,y:190,scale:.6,opacity:0},{x:60,y:155,rotationZ:3,scale:.94,opacity:1,duration:.85,ease:'power3.out'},12.4);
+tl.fromTo('#gc',{x:300,y:290,scale:.6,opacity:0},{x:110,y:295,rotationZ:5,scale:.88,opacity:1,duration:.85,ease:'power3.out'},12.65);
+tl.fromTo('#gallery',{scale:1.2},{scale:1,duration:1.05,ease:'power3.inOut'},13.45);
+tl.to('#gallery-title',{opacity:0,duration:.4},15.1);
+tl.to('#gallery',{scale:.65,y:100,opacity:0,duration:.8,ease:'power3.inOut'},15.2);
+tl.to('#end-stage',{opacity:1,duration:.6},15.4);
+// The right-hand brand symbol grows and releases the closing typography.
+tl.fromTo('#end-symbol',{opacity:0,scale:.35,rotationZ:-45},{opacity:1,scale:3.6,x:-30,y:-200,rotationZ:0,duration:.9,ease:'power3.out'},15.45);
+tl.set('#end-copy',{opacity:1},15.75);
+tl.fromTo('#end-a',{clipPath:'inset(0% 100% 0% 0%)',x:65},{clipPath:'inset(0% 0% 0% 0%)',x:0,duration:.75,ease:'power3.out'},15.8);
+tl.fromTo('#end-b',{clipPath:'inset(0% 100% 0% 0%)',x:65},{clipPath:'inset(0% 0% 0% 0%)',x:0,duration:.75,ease:'power3.out'},16.25);
+tl.fromTo('#end-logo',{opacity:0,y:15},{opacity:1,y:0,duration:.6},15.95);
+tl.to('#end-symbol',{scale:2.7,x:30,y:-190,rotationZ:45,duration:1.1,ease:'power2.inOut'},16.45);
+tl.to('#end-b',{scale:1.09,duration:.65,ease:'power3.out'},17.05);
+tl.to('#end-symbol',{scale:2.9,rotationZ:60,duration:.6,ease:'power2.out'},17.55);
+tl.set(['#review-copy','#approved'],{opacity:0},12.4);
+tl.set(['#gallery','#gallery-title'],{opacity:0},16);
+window.__timelines=window.__timelines||{};window.__timelines.flow=tl;
+
+</script>
+</template>
+
+
